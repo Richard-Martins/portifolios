@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+body{
+    background-color: #020412;
+    color: #fff;
+    overflow: hidden;
+}
+
+header{
+    padding: 3% 8.5%;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+    transition: .8s;
+}
+
+.logo:hover{
+    transform: scale(1.2);
+}
+
+.menu ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+.menu ul li a{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 20px;
+    padding: 0px 10px;
+    position: relative;
+    transition: .8s;
+}
+
+.menu a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    border: 2px solid yellow;
+    width: 100%;
+    transform: scale(0, 1);
+    transition: transform 0.3s ease;
+}
+
+.menu a:hover:after{
+    transform: scale(1, 1);
+}
+
+.logo-menu{
+    width: 30px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+div.content{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+}
+
+.content h1{
+    font-size: 4em;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.content span{
+    color: yellow;
+    font-weight: 700;
+}
+
+.content p{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+button{
+    border: 1px solid yellow;
+    border-radius: 5px;
+    margin: 0px 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: .8s;
+}
+
+button:hover{
+    transform: translateY(-5px);
+}
+
+button.contato{
+    font-weight: 700;
+    color: yellow;
+    background-color: transparent;
+}
+
+button.baixar{
+    font-weight: 700;
+    background-color: yellow;
+    color: #020412;
+}
+
+div.image{
+    position: absolute;
+    right: 0;
+}

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61% );
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0px;
+    margin-bottom: 10px;
+}
+
+.logo{
+    height: 62px;
+    width: 62px;
+    cursor: pointer;
+}
+
+.menu ul li{
+    display: inline-block;
+}
+
+.menu ul li a{
+    font-family: 'Sarala', sans-serif;
+    color: #FFF2E7;
+    text-decoration: none;
+    position: relative;
+    margin: 32px;
+}
+
+.menu a::after{
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 100%;
+    content: "";
+    border: 2px solid #fff2e7b4;
+    transform: scale(0,1);
+    transition: transform .3s ease;
+}
+
+.menu a:hover::after{
+    transform: scale(1,1);
+    
+}
+
+.menu ul li a:hover{
+    color: #fff2e7b4;
+}
+
+main{
+    border-top: 0.4px solid #FFF2E7;
+}
+
+.content-principal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.content-principal div{
+    display: flex;
+    flex-direction: column;
+}
+
+.content-principal h1{
+    font-family: 'Righteous', cursive;
+    font-size: 64px;
+    color: #FFF2E7;
+    padding-bottom: 20px;
+}
+
+.content-principal p{
+    font-family: 'Sarala', cursive;
+    font-size: 24px;
+    color: #FFF2E7;
+    padding-bottom: 20px;
+}
+
+.content-principal .btn{
+    width: 185px;
+    Height: 67px;
+    color: #2F2325;
+    font-size: 24px;
+    border-radius: 20px;
+    background-color: #ECD6C4;
+    border: none;
+    transition: transform .8s;
+}
+
+.content-principal .btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px #ECD6C4;
+}
+
+.content-secundaria div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.content-secundaria h2{
+    color: #FFF2E7;
+    font-family: 'Righteous', cursive;
+    font-weight: normal;
+    padding-bottom: 20px;
+    padding-top: 50px;
+    border-top: 0.4px solid #FFF2E7;
+}
+
+.content-secundaria p{
+    font-size: 18px;
+    font-family: 'Sarala', cursive;
+    color: #FFF2E7;
+    line-height: 60px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    border-top: 0.4px solid #FFF2E7;
+}
+
+footer img{
+    padding-top: 30px;
+}
+
+
+
