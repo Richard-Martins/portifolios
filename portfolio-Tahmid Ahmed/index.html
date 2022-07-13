@@ -9,9 +9,10 @@
 </head>
 <body>
 
+<!------Welcome Start---------->
 <section class="welcome">
     <header>
-        <nav class="menu">
+        <nav class="menu" id="menu">
         
             <h2 class="logo">
                 Portfo<span>lio</span>
@@ -21,16 +22,16 @@
                     <a href="">Home</a>
                 </li>
                 <li>
-                    <a href="">About Us </a>
+                    <a href="#about-us">About Us </a>
                 </li>
                 <li>
-                    <a href="">Services</a>
+                    <a href="#services">Services</a>
                 </li>
                 <li>
-                    <a href="">Skills</a>
+                    <a href="#skills">Skills</a>
                 </li>
                 <li>
-                    <a href="">Contact Us</a>
+                    <a href="#contact us">Contact Us</a>
                 </li>
             </ul>
             <button class="btn-subscribe">
@@ -58,7 +59,9 @@
     
 <main>
     <article>
-        <section class="about">
+
+<!------About Me Start---------->
+        <section class="about" id="about-us">
             <div class="my-photo">
                 <img src="imagem/main-img.png" alt="my photo">
             </div>
@@ -76,8 +79,9 @@
                 </button>
             </div>
         </section>
-        
-        <section class="services">
+
+<!------Services Start---------->        
+        <section class="services" id="services">
             <h2>Our Services</h2>
 
             <div class="card-services">
@@ -123,7 +127,7 @@
             </div>
         </section>
 
-        <section class="hire">
+        <section class="hire" id="skills">
             <h2>
                 Let Me Get You A Beautiful Website
             </h2>
@@ -132,32 +136,39 @@
              </button>
         </section>
 
-        <footer class="contact">
-            <h2>Tahmid Ahmed</h2>
-            <p>
-                For more HTML,CSS, and coding tutorial - please click on the<br> link bellow to subscribe to my channel:
-            </p>
-
-            <div class="social-media">
-                <a href="#">
-                    <ion-icon name="logo-facebook">
-                    </ion-icon>
-                </a>
-
-                <a href="#">
-                    <ion-icon name="logo-dribbble"></ion-icon>
-                </a>
-
-                <a href="#">
-                    <ion-icon name="logo-whatsapp"></ion-icon>
-                </a>
-            </div>
-            <p class="end">
-                CopyRight By Tahmid Ahmed
-            </p>
-        </footer>
     </article>
 </main>
+
+<!------Footer Start---------->
+<footer class="contact" id="contact us">
+    <h2>Tahmid Ahmed</h2>
+    <p>
+        For more HTML,CSS, and coding tutorial - please click on the<br> link bellow to subscribe to my channel:
+    </p>
+
+    <div class="social-media">
+        <a href="#">
+            <ion-icon name="logo-facebook">
+            </ion-icon>
+        </a>
+
+        <a href="#">
+            <ion-icon name="logo-dribbble"></ion-icon>
+        </a>
+
+        <a href="#">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+
+        <a href="#menu">
+            <ion-icon name="arrow-up" class="row">
+            </ion-icon>
+        </a>
+    </div>
+    <p class="end">
+        CopyRight By Tahmid Ahmed
+    </p>
+</footer>
     
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>

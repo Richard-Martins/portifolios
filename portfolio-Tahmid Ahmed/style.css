@@ -5,6 +5,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .welcome{
@@ -352,6 +353,12 @@ h4.destaque{
     background-color: #f9004d;
     padding: 10px;
     margin-bottom: 40px;
+    transition: transform .5s ease;
+}
+
+.row{
+    position: absolute;
+    right: 20px;
 }
 
 .end{
