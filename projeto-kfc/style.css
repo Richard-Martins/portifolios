@@ -118,5 +118,67 @@ ion-icon{
 
 .arrow-left , .arrow-right{
     border: 2px solid #ffff;
+    border-radius: 10px;
     margin: 0px 20px;
+    transition: .1.5s;
+}
+
+.arrow-left:hover , .arrow-right:hover{
+    background-color: #ffff;
+    color: #000000c3;
+}
+
+.anim{
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.anim-left{
+    opacity: 0;
+    transform: translateX(50px);
+    animation: moveleft .5s linear forwards;
+    animation-delay: 1s;
+}
+
+@keyframes moveleft{
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.anim-right{
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: moveleft .5s linear forwards;
+    animation-delay: 1s;
+}
+
+@keyframes moveleft{
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.anim-bottom{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveleft .5s linear forwards;
+    animation-delay: 2s;
+}
+
+@keyframes anim-bottom{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
