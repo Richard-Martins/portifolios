@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    background: white url(img/bg1.jpg)  no-repeat ;
+    background-size: cover;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+}
+
+.logo{
+    width: 60px;
+    cursor: pointer;
+}
+
+.menu li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px;
+}
+
+.menu li a{
+    color: #000;
+    text-decoration: none;
+    padding: 0 10px;
+    position: relative;
+}
+
+.menu li a:hover{
+    color: #FD4766;
+}
+
+.menu li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: #fd4766;
+    width: 0;
+    height: 3px;
+    transition: .5s ease;
+}
+
+.menu li a:hover::after{
+    width: 100%;
+   
+}
+
+.btn {
+    text-transform: uppercase;
+    color: #ffff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    padding: 16px 40px;
+    background-color: #FD4766;
+    border: 2px solid #FD4766;
+    border-radius: 50px;
+    transition: .5s;
+}
+
+.btn:hover{
+    color: #FD4766;
+    background-color: transparent;
+}
+
+/***********Main***************/    
+
+.conteiner{
+    position: absolute;
+    top: 35%;
+    left: 8%;
+}
+
+.sub-titulo{
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    background: linear-gradient(120deg, rgb(3, 169, 169), rgb(255, 0, 255),red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.titulo{
+    font-size: 75px;
+    font-weight: 700;
+    color: #1f1f25;
+}
+
+.titulo span{
+    color: #FD4766;
+}
+
+.conteiner p{
+    color: #757575;
+    margin: 10px 0 50px;
+}
+
