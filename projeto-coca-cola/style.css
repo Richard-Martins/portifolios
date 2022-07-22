@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+
+    --cor-vermelha: #f53329;
+    --cor-branca: #ffff;
+}
+
+body{
+    background-color: #111111;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1% 5%;
+}
+
+img.logo{
+    width: 150px;
+    cursor: pointer;
+}
+
+.menu li{
+    display: inline-block;
+    margin: 40px;
+}
+
+.menu a{
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--cor-branca);
+    padding: 10px;
+    position: relative;
+}
+
+.menu li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    background-color: var(--cor-vermelha);
+    width: 0;
+    height: 3px;
+    transition: .5s ease;
+}
+
+.menu li a:hover::after{
+    width: 100%;
+}
+
+
+/*************section*******/
+
+#conteiner{
+    position: relative;
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    color: var(--cor-branca);
+}
+
+div.content{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+
+}
+
+.sub-titulo{
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.titulo{
+    font-size: 10em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--cor-vermelha);
+    margin-top: -40px;
+}
+
+#conteiner p{
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+.btn{
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: var(--cor-branca);
+    background-color: var(--cor-vermelha);
+    border: 1px solid var(--cor-vermelha);
+    border-radius: 50px;
+    padding: 10px 30px;
+}
+
+/*******social*******/
+
+.social-media{
+    position: absolute;
+    top: 70%;
+    left: 5%;
+}
+ion-icon{
+    font-size: 40px;
+    border-radius: 50%;
+    background-color: #222222;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    transition: transform .5s ease;
+}
+
+ion-icon:hover{
+    transform: translateY(-10px);
+}
+
+/*******circle*******/
+
+div.circle{
+    position: absolute;
+    top: 100px;
+    right: -600px;
+    width: 1500px;
+    height: 1500px;
+    border-radius: 50%;
+    background-color: var(--cor-vermelha);
+}
+
+.circle img{
+    width: 200px;
+    margin-top: 100px;
+    margin-right: 70px;
+}
+
+#coca1{
+    
+    transform: rotate(-20deg);
+}
+#coca2{
+    
+    transform: rotate(5deg);
+    margin-right: 20px;
+}
+#coca3{
+    
+    transform: rotate(20deg);
+    margin-right: -10px;
+}
+#coca4{
+    
+    transform: rotate(-20deg);
+}
