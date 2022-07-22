@@ -22,5 +22,10 @@
 
 <p>
 <h2>Projeto Fatima</h2>
-<a href="https://richard-martins.github.io/portifolios/projeto-fatima/">projeto Fatima</a>
+<a href="https://richard-martins.github.io/portifolios/projeto-fatima/">Projeto Fatima</a>
+ </p>
+
+<p>
+<h2>Projeto KFC</h2>
+<a href="https://richard-martins.github.io/portifolios/projeto-kfc/">Projeto KFC</a>
  </p>
