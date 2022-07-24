@@ -2,6 +2,67 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 body{
-    background-color: ;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 255, 255, 0.124), rgba(0, 255, 255, 0.271)), url(imagens/banner.png) center no-repeat fixed;
+    background-size: cover;
+    color: white;
+}
+
+form{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 550px;
+    background-color: rgba(0, 0, 0, 0.808);
+    border-radius: 20px;
+}
+
+form > h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.inputbox{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: auto;
+    padding: 20px;
+}
+
+label{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+input{
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+input:focus{
+    border: 2px solid rgb(0, 255, 170);
+    outline: none;
+}
+
+input.btn{
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
 }
