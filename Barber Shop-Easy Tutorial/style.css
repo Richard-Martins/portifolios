@@ -17,7 +17,7 @@
 
 #home{
     min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5),#186E69),url(imagens/banner.jpg) center no-repeat fixed;
+    background: linear-gradient(rgba(0,0,0,0.5),#186E69),url(imagens/banner.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -130,6 +130,47 @@ div.home-conteiner p{
     background-color: #fff;
 }
 
+/***********section-features*****/
 
+#features{
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: var(--font-padrao);
+}
 
+.logo-features{
+    font-family: var(--font-padrao);
+    text-align: center;
+    margin-top: 100px;
+}
 
+.logo-features p{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #009688;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+.logo-features p::after{
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#019587, #fff);
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    z-index: -1;
+}
+
+.titulo-features{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 80px;
+}
