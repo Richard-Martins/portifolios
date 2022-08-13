@@ -45,4 +45,11 @@
 <a href="https://richard-martins.github.io/portifolios/Formulario/">Formulário</a>
  </p>
 
+ <p>
+<h2>Barber Shop</h2>
+<a href="https://richard-martins.github.io/portifolios/Barber Shop-Easy Tutorial/">Projeto Easy Tutorial</a>
+ </p>
+
+ Barber Shop-Easy Tutorial
+
 
