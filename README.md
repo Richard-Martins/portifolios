@@ -50,6 +50,6 @@
 <a href="https://richard-martins.github.io/portifolios/Barber Shop-Easy Tutorial/">Projeto Easy Tutorial</a>
  </p>
 
- Barber Shop-Easy Tutorial
+
 
 
