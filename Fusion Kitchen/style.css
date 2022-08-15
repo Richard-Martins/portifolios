@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2% 5%;
+}
+
+.logo{
+    margin-left: 4%;
+    width: 200px;
+    cursor: pointer;
+}
+
+.menu ul{
+    margin-left: 280px;
+}
+
+.menu li{
+    display: inline-block;
+    list-style: none;
+    margin: 40px;
+}
+
+.menu-bar{
+    width: 50px;
+    margin-right: 80px;
+    cursor: pointer;
+}
+
+.menu a{
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    padding: 70px 10px 1px;
+    position: relative;
+    z-index: 1;
+}
+
+.menu a::after{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #D9f688;
+    border-radius: 0px 0px 10px 10px;
+    transition: .5s;
+    z-index: -1;
+}
+
+.menu a:hover::after{
+    height: 85px;
+}
+
+/*******section*******/
+
+.content{
+    position: absolute;
+    top: 40%;
+    left: 9%;
+}
+
+.titulo{
+    font-size: 3em;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 100px;
+}
+
+.btn{
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #D9f688;
+    border-radius: 20px;
+    background-color: #D9f688;
+    padding: 20px 50px;
+}
+
+#comida-g{
+    position: absolute;
+    right: 70px;
+    bottom: 50px;
+    width: 800px;
+}
+
+#comida-p{
+    position: absolute;
+    right: 500px;
+    bottom: 100px;
+    width: 300px;
+}
