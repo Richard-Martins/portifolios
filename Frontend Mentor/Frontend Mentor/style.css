@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root{
+    --font-destaque: 'Inter', sans-serif;
+    --font-padrao: 'Lexend Deca', sans-serif;
+    --bg-main: hsl(233, 47%, 7%);
+    --bg-card: hsl(244, 38%, 16%);
+    --bg-image: hsl(277, 64%, 61%);
+    --cor-padrao: hsla(0, 0%, 100%, 0.75);
+    --cor-estatics: hsla(0, 0%, 100%, 0.6);
+    --cor-main: hsl(0, 0%, 100%);
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-main);
+    overflow: hidden;
+}
+
+#conteiner{
+    height: 460px;
+    width: 1150px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-card);
+    border-radius: 10px;
+}
+
+.content{
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.titulo{
+    font-family: var(--font-destaque);
+    font-size: 2.5em;
+    color: var(--cor-main);
+}
+
+.titulo span{
+    color: var(--bg-image);
+} 
+
+.content p{
+    font-family: var(--font-padrao);
+    line-height: 30px;
+    color: var(--cor-estatics);
+    margin-bottom: 50px;
+}
+
+.card-statics{
+    display: flex;
+    justify-content: space-between  ;
+}
+
+.static-titulo{
+    font-family: var(--font-destaque);
+    color: var(--cor-main);
+    margin-bottom: 5px;
+}
+
+.card-statics span{
+    font-family: var(--font-padrao);
+    color: var(--cor-estatics);
+}
+
+.image{
+    position: relative;
+}
+
+.image img{
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-image);
+    border-radius: 10px;
+    opacity: .5;
+}
+
+@media  (max-width: 375px) {
+    #conteiner{
+        height: 700px;
+        width: 375px;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bg-card);
+        border-radius: 10px;
+    }
+}
+
