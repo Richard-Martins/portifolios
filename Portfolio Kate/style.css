@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: 2% 8%;
+    transition: .8s;
+}
+
+body.active{
+    background-color: black;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-logo{
+    cursor: pointer;
+}
+
+.navbar li{
+    display: inline-block;
+    list-style: none;
+    margin: 25px;
+}
+
+.navbar a{
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #1C1C1C;
+    transition: .8s;
+}
+
+.navbar.active a{
+    color: white;
+}
+
+.icon{
+    font-size: 30px;
+    color: #1E1C1B;
+    cursor: pointer;
+}
+
+.icon.active{
+    color: white;
+}
+
+#moon{
+    transition: .8s;
+}
+/*
+#moon.active{
+    display: none;
+}
+*/
+
+#sun{
+    display: none;
+    transition: .8s;
+}
+/*
+#sun.active{
+    display: block;
+}
+*/
+/*******Section*********/
+
+#conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content .titulo{
+    font-size: 4em;
+    color: #1C1C1C;
+    margin-bottom: 30px;
+    transition: .8s;
+}
+
+.titulo span{
+    color: #FF531F;
+}
+
+.titulo.active{
+    color: white;
+}
+
+.content .paragrafo{
+    font-size: 17px;
+    color: #1C1C1C;
+    margin-bottom: 40px;
+    transition: .8s;
+}
+
+.paragrafo.active{
+    color: white;
+}
+
+.content .btn{
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    background-color: #1E1C1B;
+    border-radius: 10px;
+    padding: 10px;
+    transition: .8s;
+}
+
+.btn.active{
+    color: black;
+    background-color: white;
+}
+
+.social-media{
+    margin-top: 200px;
+}
+
+.social-media .icon{
+    padding: 10px;
+    transition: .5s;
+}
+
+.social-media .icon:hover{
+    transform: translateY(-10px);
+}
+
+/*****image-box****/
+
+.bg-girl{
+    position: relative;
+    transition:  transform 1s;
+}
+
+.girl{
+    position: absolute;
+    left: 60%;
+    transition: left 1s;
+}
+
+.img-box:hover .bg-girl{
+    transform: translateY(-25px);
+}
+
+.img-box:hover .girl{
+    left: 64%;
+}
