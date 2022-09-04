@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #1B1F24;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    margin: 2% 6%;
+}
+
+.menu #logo{
+    width: 200px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.menu #logo-menu{
+    width: 50px;
+    cursor: pointer;
+}
+
+.menu ul{
+    flex: 1;
+    text-align: right;
+}
+
+.menu li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+
+.menu a{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn{
+    outline: none;
+    border: none;
+    border-radius: 60px;
+    width: 80px;
+    height: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.btn.active{
+    background-color: green;
+}
+
+#circle{
+    display: block;
+    width: 36px;
+    height: 36px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translateX(4px);
+    transition: all .5s;
+}
+
+#circle.active{
+    transform: translateX(40px);
+}
+
+/*section lamp*/
+
+#lamp{
+    position: absolute;
+    left: 25%;
+    top: -10%;
+    z-index: 1;
+}
+
+#light{
+    position: absolute;
+    left: 6%;
+    top: 45%;
+    opacity: 0;
+    transition: all .5s;
+}
+
+#light.active{
+    opacity: 1;
+}
+
+/*section content*/
+
+.content{
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    color: #fff;
+}
+
+.titulo{
+    font-size: 5em;
+    font-weight: 400;
+}
+
+.btn-content{
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #00986f;
+    color: #fff;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.control{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 270px;
+}
+
+.control .line{
+    width: 250px;
+    height: 4px;
+    background-color: #fff;
+    margin: 0 20px;
+    border-radius: 2px;
+}
+
+.control .line span{
+    width: 50%;
+    height: 8px;
+    margin-top: -2px;
+    border-radius: 4px;
+    background-color: #00986f;
+    display: block;
+}
+

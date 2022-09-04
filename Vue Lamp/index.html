@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Vue Lamp</title>
+</head>
+<body>
+    <header>
+        <nav class="menu">
+            <img src="imagens/menu.png" alt="logo-menu" id="logo-menu">
+            <img src="imagens/logo.png" alt="logo" id="logo">
+            <ul>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">Modern</a></li>
+                <li><a href="#">Contemporary</a></li>
+                <li><a href="#">Affordable</a></li>
+            </ul>
+            <button class="btn"><span id="circle"></span></button>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <img src="imagens/lamp.png" alt="lamp" id="lamp">
+            <img src="imagens/light.png" alt="light" id="light">
+            <div class="content">
+                <h1 class="titulo">
+                    Latest<br>in Lighting
+                </h1>
+                <p>
+                    This is the first from our company.We're making a huge collection of<br>modern lamps in all categories from home use to office use.
+                </p>
+                <button class="btn-content">
+                    Check All Collections
+                </button>
+                <div class="control">
+                    <p>04</p>
+                    <div class="line"><span></span></div>
+                    <p>05</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        var btn = document.querySelector('.btn')
+        var circle = document.getElementById('circle')
+        var light = document.getElementById('light')
+        
+        btn.addEventListener('click', clicar)
+
+        function clicar(){
+            btn.classList.toggle('active')
+            circle.classList.toggle('active')
+            light.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
