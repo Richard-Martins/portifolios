@@ -1,144 +1,316 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+:root{
+    --bg-color-blue: #0161B8;
+    --bg-color-black: #1E1E1E;
+    --bg-color-red: #E50C2D;
+    --color-letters: #fff;
+}
 
 body{
-    background-color: #0161B8;
-    overflow: hidden;
+    background-color: var(--bg-color-blue);
+    transition: all .5s;
 }
 
-.menu{
+.navbar{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 2% 10%;
+    justify-content: space-between;
+    padding: 1% 7%;
 }
 
-.menu .logo{
+.navbar .logo-pepsi{
     width: 100px;
-    height: 100px;
     cursor: pointer;
 }
 
-.menu li{
+.navbar li{
     display: inline-block;
-    list-style: none;
+    margin: 30px;
 }
 
-.menu li a{
+.navbar li a{
     font-size: 18px;
-    font-weight: 400;
-    color: #FFFFFF;
+    font-weight: 500;
     text-decoration: none;
-    margin: 20px;
-    padding: 0px 10px;
+    color: var(--color-letters);
+    padding: 0 5px;
     position: relative;
 }
 
-.menu a::after{
+.navbar li a::after{
     content: '';
     position: absolute;
+    bottom: -6px;
     left: 0;
-    bottom: -5px;
-    border: 2px solid #FFFFFF;
     width: 100%;
+    height: 2px;
+    background: var(--color-letters);
     transform: scale(0,1);
-    transition: transform .3s ease;
+    transition: transform .5s;
 }
 
-.menu a:hover::after{
+.navbar li a:hover::after{
     transform: scale(1,1);
 }
 
-        /*Header*/
+#sidebar{
+    display: none;
+    cursor: pointer;
+}
 
-.section{
+.line{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--color-letters);
+    border-radius: 2px;
+    margin: 5px auto;
+    transition: all .5s ease-in-out;
+}
+/*Section*/
+
+.conteiner{
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin: 7% 10%;
+    margin: 8% 7%;
 }
 
-.sub-titulo{
+.conteiner .subtitulo{
     font-size: 5em;
-    color: #FFFFFF;
-    text-transform: uppercase;
+    color: var(--color-letters);
 }
 
-.titulo{
-    font-size: 150px;
-    font-weight: 800;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    margin-top: -60px;
-}
-
-p{
-    font-weight: 500;
-    color: #FFFFFF;
-    line-height: 40px;
+.conteiner .titulo{
+    font-size: 8em;
+    font-weight: 900;
+    line-height: 100px;
+    color: var(--color-letters);
     margin-bottom: 30px;
 }
 
-.btn{
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border: 1px solid #FFFFFF;
-    outline: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    transition: transform .8s;
+.conteiner p{
+    font-size: 18px;
+    color:  var(--color-letters);
+    margin-bottom: 40px;
 }
 
-.btn:hover{
-    transform: scale(1.1);
+.conteiner .btn{
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 30px;
+    background-color: var(--color-letters);
+    padding: 10px 30px;
+    color: #000;
 }
 
-.image-logo{
-    display: flex;
-    align-items: center;
+.image{
+    max-width: 400px;
+    min-width: 200px;
+    margin-right: -20%;
 }
 
-.image-pepsi{
-    margin-right: 250px;
+.image img{
+    width: 100%;
 }
 
 .social-media{
     display: flex;
     flex-direction: column;
-    width: 30px;
-    cursor: pointer;
-    margin-right: -130px;
-}
-
-.social-media img{
-    padding: 0px 0px 40px;
-    width: 40px;
-    transition: .5s;
-}
-
-.social-media img:hover{
-    transform: translateY(-10px);
-}
-
-.pepsi-sabores{
-    display: flex;
     justify-content: center;
+    align-items: center;
+    margin-right: -4%;
 }
 
-.pepsi-sabores img{
-    width: 40px;
-    margin-top: -30px;
-    margin-right: 30px;
-    transition: .5s;
+.social-media i{
+    font-size: 30px;
+    color: var(--color-letters);
+    margin: 20px 0;
+    cursor: pointer;
 }
 
-.pepsi-sabores img:hover{
+/*Footer*/
+
+#pepsi-sabores{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -7% auto;
+}
+
+#pepsi-sabores img{
+    width: 50px;
+    margin: 20px;
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+#pepsi-sabores img:hover{
     transform: translateY(-10px);
 }
+
+/*Responsivo*/
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .navbar ul{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 100%;
+        background-color: var(--color-letters);
+        transition: all .5s ease-in-out;
+    }
+
+    .navbar ul li a{
+        color: #000;
+    }
+
+    .navbar ul li a::after{
+        background-color: #000;
+    }
+
+    #sidebar{
+        display: block;
+    }
+
+    #sidebar.active #line1{
+        transform: translateY(5px) rotate(135deg);
+    }
+
+    #sidebar.active #line2{
+       opacity: 0;
+    }
+
+    #sidebar.active #line3{
+        transform: translateY(-10px) rotate(-135deg);
+    }
+
+    .navbar.active ul{
+        left: 0;
+    }
+
+    /*Section*/
+
+    .conteiner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .content .btn{
+        text-align: right;
+    }
+
+    .image{
+        margin-top: 100px;
+    }   
+
+    .social-media{
+        position: absolute;
+        top: 85%;
+        right: 8%;
+    }
+
+    #pepsi-sabores{
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 600px){
+    .navbar ul{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 100%;
+        background-color: var(--color-letters);
+        transition: all .5s ease-in-out;
+    }
+
+    .navbar ul li a{
+        color: #000;
+    }
+
+    .navbar ul li a::after{
+        background-color: #000;
+    }
+
+    #sidebar{
+        display: block;
+    }
+
+    #sidebar.active #line1{
+        transform: translateY(5px) rotate(135deg);
+    }
+
+    #sidebar.active #line2{
+       opacity: 0;
+    }
+
+    #sidebar.active #line3{
+        transform: translateY(-10px) rotate(-135deg);
+    }
+
+    .navbar.active ul{
+        left: 0;
+    }
+
+    /*Section*/
+
+    .conteiner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .conteiner .subtitulo{
+        font-size: 3em;
+    }
+
+    .conteiner .titulo{
+        font-size: 6em;
+    }
+
+    .conteiner p{
+        font-size: 15px;
+    }
+
+    .content .btn{
+        text-align: right;
+    }
+
+    .image{
+        margin-top: 100px;
+    }   
+
+    .social-media{
+        position: absolute;
+        top: 85%;
+        right: 8%;
+    }
+
+    #pepsi-sabores{
+        margin-top: 100px;
+    }
+}
+
