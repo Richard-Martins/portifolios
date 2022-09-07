@@ -65,6 +65,11 @@
 <a href="https://richard-martins.github.io/portifolios/Vue%20Lamp/">Projeto Easy Tutorial</a>
  </p>
 
+ <p>
+<h2>Projeto Pepsi</h2>
+<a href="https://richard-martins.github.io/portifolios/Vue%20Lamp/">Projeto Online Tutorial</a>
+ </p>
+
 
 
 
