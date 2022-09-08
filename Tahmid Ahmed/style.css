@@ -1,4 +1,4 @@
-/*Configuração Global*/
+/*--------------------------------Configuração Global--------------------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
 
@@ -17,7 +17,12 @@
     --bg-section-odd: #101010;
 }
 
-/*Section Home*/
+body,html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/*----------------------------------Header--------------------------*/
 
 #home{
     min-height: 100vh;
@@ -100,6 +105,8 @@ span{
     transition: all .5s;
 }
 
+/*----------------------------------Section Home--------------------------*/
+
 .content-home{
     position: absolute;
     left: 8%;
@@ -145,7 +152,41 @@ span{
     display: none;
 }
 
-/*Section About*/
+.scroll{
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.btn-scroll{
+    font-size: 20px;
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--color-destaque);
+}
+
+.scroll i{
+    font-size: 20px;
+    color: var(--color-destaque);
+    position: absolute;
+    top: 40px;
+    left: 40%;
+    animation: shake 1s infinite alternate;
+}
+
+@keyframes shake{
+    from{
+        transform: translateY(-10px);
+    }
+
+    to{
+        transform: translateY(10px);
+    }
+}
+
+/*----------------------------------Section About--------------------------*/
 
 #about{
     min-width: 100vw;
@@ -192,7 +233,7 @@ span{
     background-color: var(--bg-section);
 }
 
-/*Section Services*/
+/*----------------------------------Section Services--------------------------*/
 
 #services{
     min-width: 100vw;
@@ -239,7 +280,7 @@ span{
 }
 
 
-/*Section Skills*/
+/*----------------------------------Section Skills--------------------------*/
 
 #skills{
     min-width: 100vw;
@@ -260,7 +301,7 @@ p{
     line-height: 30px;
 }
 
-/*Section Contact*/
+/*----------------------------------Section Contact--------------------------*/
 
 #contact{
     min-width: 100vw;
@@ -307,9 +348,11 @@ p{
     margin-top: 40px;
 }
 
-/*Resposivo*/
+/*----------------------------------Reponsivo--------------------------*/
 
 @media  screen and (max-width: 600px) {
+
+    /*----------------------------------Section Home--------------------------*/
 
     #home{
         min-height: 100vh;
@@ -335,6 +378,7 @@ p{
         height: 100%;
         background-color: var(--color-btn);
         z-index: 1;
+        overflow: hidden;
         transition: all .5s;
     }
 
@@ -425,7 +469,7 @@ p{
         cursor: pointer;
     }
 
-    /*Section About*/
+   /*----------------------------------Section About--------------------------*/
 
     .conteiner-about{
         display: flex;
@@ -461,7 +505,7 @@ p{
         margin: 0 auto 100px ;
     }
 
-    /*Section Services*/
+    /*-------------------------------Section Services--------------------------*/
 
     .sevices-cards{
         flex-direction: column;
@@ -488,7 +532,7 @@ p{
         padding: 0 10px;
     }
 
-    /*Section Skills*/
+    /*----------------------------------Section Skills--------------------------*/
 
     #skills{
         min-height: 50vh;
@@ -501,8 +545,9 @@ p{
         margin-top: -20px;
     }
 
-    /*Section Contact*/
 }
+
+
 
 
 
