@@ -65,10 +65,7 @@
 <a href="https://richard-martins.github.io/portifolios/projeto-pepsi/">Projeto Online Tutorials</a>
  </p>
 
- <p>
-<h2>Projeto Tahmid Ahmed</h2>
-<a href="https://richard-martins.github.io/portifolios/portfolio-Tahmid%20Ahmed/">Projeto Tahmid Ahmed</a>
- </p>
+
 
 
 
