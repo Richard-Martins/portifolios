@@ -249,7 +249,7 @@ p{
 
 #contact{
     min-width: 100vw;
-    min-height: 40vh;
+    min-height: 45vh;
     background-color: var(--bg-section-odd);
     text-align: center;
 }
@@ -287,17 +287,9 @@ p{
 
 /*Footer*/
 
-footer{
-    min-width: 100%;
-    text-align: center;
+.footer{
     background-color: var(--bg-section-odd);
-    overflow: hidden;
-}
-
-footer p{
-    font-size: 18px;
-    text-align: center;
-    color: var(--color-paragrafo);
+    margin-top: 40px;
 }
 
 /*Resposivo*/
@@ -313,58 +305,62 @@ footer p{
     }
 
     .menu .logo{
-        font-size: 25px;
+        font-size: 30px;
     }
 
-    .menu ul{
-        transform: translateX(-200px);
-        height: 100vh;
-        position: fixed;
+    #menu-links{
+        position: absolute;
         top: 0;
-        left: 0;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 100%;
         background-color: var(--color-btn);
-        z-index: 2;
-        transition: all .5s;
+        z-index: 1;
+        transition: all .8s;
     }
 
-    .menu.active ul{
-        transform: translateX(0);
-    }
-
-    .menu li{
-        display: block;
-    }
-
-    .menu a::after{
-        content: '';
-        position: absolute;
-        bottom: -8px;
+    #menu-links.active{
         left: 0;
-        width: 100%;
-        height: 3px;
-        transform: scale(0,1);
-        background: var(--color-paragrafo);
-        transition: transform .5s ease;
-    } 
-    
-    .menu a::before{
-        content: '';
-        position: absolute;
-        top: -10px;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        transform: scale(0,1);
-        background: var(--color-paragrafo);
-        transition: transform .5s ease;
     }
-    
-    .menu a:hover::before, .menu a:hover::after{
-        transform: scale(1,1)
+
+    .menu li {
+        margin: 20px;
+    }
+
+    .menu a::before, .menu a::after{
+        background-color: var(--color-destaque);
     }
 
     .menu .btn{
         display: none;
+    }
+
+    #sidebar{
+        cursor: pointer;
+    }
+
+    #sidebar .line{
+        width: 30px;
+        height: 3px;
+        background-color: var(--color-btn);
+        margin: 5px 0;
+        transition: all .5s;
+    }
+
+    #sidebar.active #line1{
+        transform: translateY(5px) rotate(310deg);
+    }
+
+    #sidebar.active #line2{
+        opacity: 0;
+    }
+
+    #sidebar.active #line3{
+        transform: translateY(-11px) rotate(-310deg);
     }
 
     .content-home{
@@ -381,7 +377,7 @@ footer p{
 
     .ipt-email{
         font-size: 17px;
-        width: 300px;
+        width: 400px;
         border: 3px solid var(--color-btn);
         outline: none;
         border-radius: 30px;
@@ -396,44 +392,52 @@ footer p{
         padding: 5px;
     }
 
-    .menu-bar{
+    
+
+    /*Section About*/
+
+    .conteiner-about{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
+        align-items: center;
+    }
+
+    .my-photo{
+        width: 400px;
+    }
+
+    .subtitulo{
+        text-align: center;
+        margin-top: -50px;
+    }
+
+    .content-about h3{
+        text-align: center;
     }
     
-    .menu-bar.active .bar #bar1{
-         transform: translateY(4px) rotate(45deg);
+    .content-about p{
+        text-align: center;
     }
 
-    .menu-bar.active .bar #bar2{
-         opacity: 0;
+    .content-about .btn{
+        display: block;
+        margin: 0 auto 100px ;
     }
 
-    .menu-bar.active .bar #bar3{
-          transform: translateY(-2px) rotate(-45deg);
+    /*Section Services*/
+
+    .sevices-cards{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
     }
 
-    .bar{
-        width: 100%;
-        height: 3px;
-        border-radius: 5px;
-        background-color: var(--color-btn);
-        transition: all .5s;
-    }
+    /*Section Skills*/
 
-    #bar1{
-        transform: translateY(-4px);
+    #skills .subtitulo{
+        font-size: 28px;
     }
-
-    #bar3{
-        transform: translateY(4px);
-    }
-
-    /*Section About*/
 }
 
 

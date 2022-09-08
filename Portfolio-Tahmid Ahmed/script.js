@@ -1,11 +1,9 @@
-var menu = document.querySelector('.menu')
-var menuBar = document.querySelector('.menu-bar')
-var bar = document.querySelector('.bar')
+var sidebar = document.getElementById('sidebar')
+var menuLinks = document.getElementById('menu-links')
 
-menuBar.addEventListener('click', clicou)
+sidebar.addEventListener('click', toggle)
 
-function clicou(){
-    menuBar.classList.toggle('active')
-    bar.classList.toggle('active')
-    menu.classList.toggle('active')
+function toggle(){
+    sidebar.classList.toggle('active')
+    menuLinks.classList.toggle('active')
 }
