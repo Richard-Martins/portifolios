@@ -62,26 +62,13 @@ body{
     transform: scale(1,1);
 }
 
-#sidebar{
-    display: none;
-    cursor: pointer;
-}
-
-.line{
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: var(--color-letters);
-    border-radius: 2px;
-    margin: 5px auto;
-    transition: all .5s ease-in-out;
-}
-/*Section*/
+/*-----------------------------------------Section-------------------------*/
 
 .conteiner{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 8% 7%;
 }
 
@@ -101,6 +88,7 @@ body{
 .conteiner p{
     font-size: 18px;
     color:  var(--color-letters);
+    max-width: 651px;
     margin-bottom: 40px;
 }
 
@@ -158,159 +146,102 @@ body{
     transform: translateY(-10px);
 }
 
-/*Responsivo*/
+/*-------------------------------------------Responsivo------------------------------------*/
 
-@media screen and (min-width: 768px) and (max-width: 992px){
-    .navbar ul{
-        position: fixed;
-        top: 0;
-        left: -100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 300px;
-        height: 100%;
-        background-color: var(--color-letters);
-        transition: all .5s ease-in-out;
-    }
-
-    .navbar ul li a{
-        color: #000;
-    }
-
-    .navbar ul li a::after{
-        background-color: #000;
-    }
-
-    #sidebar{
-        display: block;
-    }
-
-    #sidebar.active #line1{
-        transform: translateY(5px) rotate(135deg);
-    }
-
-    #sidebar.active #line2{
-       opacity: 0;
-    }
-
-    #sidebar.active #line3{
-        transform: translateY(-10px) rotate(-135deg);
-    }
-
-    .navbar.active ul{
-        left: 0;
-    }
-
-    /*Section*/
-
-    .conteiner{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-
-    .content .btn{
-        text-align: right;
-    }
-
-    .image{
-        margin-top: 100px;
-    }   
-
-    .social-media{
-        position: absolute;
-        top: 85%;
-        right: 8%;
-    }
-
-    #pepsi-sabores{
-        margin-top: 100px;
-    }
+#sidebar{
+    display: none;
+    cursor: pointer;
 }
 
-@media screen and (max-width: 767px) and (min-width: 600px){
-    .navbar ul{
+#sidebar .line{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--color-letters);
+    border-radius: 2px;
+    margin: 5px auto;
+    transition: all .5s;
+}
+
+#sidebar.active #line1{
+    transform: translateY(5px) rotate(-135deg);
+}
+
+#sidebar.active #line2{
+    opacity: 0;
+}
+
+#sidebar.active #line3{
+    transform: translateY(-11px) rotate(135deg);
+}
+
+
+@media screen and (max-width: 600px) {
+
+    /*-------------------------------------------Header------------------------------------------*/
+
+    .navbar{
+        padding: 5% 7%;
+    }
+
+    .navbar .logo-pepsi{
+        width: 70px;
+    }
+
+    #nav-links{
+        height: 200vh;
+        width: 250px;
         position: fixed;
         top: 0;
         left: -100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        width: 300px;
-        height: 100%;
         background-color: var(--color-letters);
-        transition: all .5s ease-in-out;
+        padding-top: 195px;
+        transition: all .5s;
     }
 
-    .navbar ul li a{
-        color: #000;
+    #nav-links.active{
+        left: 0;
     }
 
-    .navbar ul li a::after{
-        background-color: #000;
+    #nav-links a{
+        color: var(--bg-color-black);
     }
 
     #sidebar{
         display: block;
     }
 
-    #sidebar.active #line1{
-        transform: translateY(5px) rotate(135deg);
-    }
+     /*-------------------------------------------Section------------------------------------------*/
 
-    #sidebar.active #line2{
-       opacity: 0;
-    }
-
-    #sidebar.active #line3{
-        transform: translateY(-10px) rotate(-135deg);
-    }
-
-    .navbar.active ul{
-        left: 0;
-    }
-
-    /*Section*/
-
-    .conteiner{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
+     .conteiner{
+        gap: 100px;
+     }
 
     .conteiner .subtitulo{
-        font-size: 3em;
+        font-size: 2em;
     }
 
     .conteiner .titulo{
-        font-size: 6em;
+        font-size: 7em;
     }
 
     .conteiner p{
-        font-size: 15px;
+        font-size: 16px;
+        text-align: justify;
     }
-
-    .content .btn{
-        text-align: right;
-    }
-
-    .image{
-        margin-top: 100px;
-    }   
 
     .social-media{
         position: absolute;
-        top: 85%;
-        right: 8%;
+        right: 20px;
+        top: 120%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(0, 0, 0, 0.2);
+        border-radius: 5px;
+        padding: 10px;
     }
 
-    #pepsi-sabores{
-        margin-top: 100px;
-    }
 }
-
