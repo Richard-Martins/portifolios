@@ -1,3 +1,5 @@
+/*----------------------------------Cofiguração Globlal--------------------------*/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 *{
@@ -11,6 +13,7 @@ body{
     background-color: #1B1F24;
 }
 
+/*----------------------------------Header-------------------------*/
 .menu{
     display: flex;
     align-items: center;
@@ -75,7 +78,7 @@ body{
     transform: translateX(40px);
 }
 
-/*section lamp*/
+/*-----------------------------section lamp----------------------------------------------------*/
 
 #lamp{
     position: absolute;
@@ -96,7 +99,7 @@ body{
     opacity: 1;
 }
 
-/*section content*/
+/*------------------------------------section content-----------------------*/
 
 .content{
     position: absolute;
@@ -146,4 +149,3 @@ body{
     background-color: #00986f;
     display: block;
 }
-
