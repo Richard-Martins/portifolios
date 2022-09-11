@@ -1,0 +1,232 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: var(--font-padrao);
+}
+
+:root {
+  --font-padrao: "Josefin Sans", sans-serif;
+  --font-destaque: "Alata", sans-serif;
+  --cor-branca: hsl(0, 0%, 100%);
+  --cor-preta: hsl(0, 0%, 0%);
+  --cor-cinza: hsl(0, 0%, 55%);
+  --cor-cinza-escuro: hsl(0, 0%, 41%);
+}
+
+/* -----------------------------Configuração Global------------- */
+
+/* -----------------------Section Home------------- */
+
+#home {
+  min-height: 100vh;
+  background: url(imagens/desktop/image-hero.jpg) no-repeat;
+  background-size: contain;
+  padding: 3% 12%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-destaque);
+  font-size: 3em;
+  font-weight: 400;
+  color: var(--cor-branca);
+}
+
+#nav-links {
+  transition: 0.5s;
+}
+
+#nav-links li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 20px;
+}
+
+#nav-links a {
+  font-family: var(--font-destaque);
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--cor-branca);
+  position: relative;
+}
+
+#nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 25%;
+}
+
+#nav-links a:hover::after {
+  width: 50%;
+  height: 2px;
+  background-color: var(--cor-branca);
+}
+
+span#mobile {
+  display: none;
+}
+
+.navbar i {
+  display: none;
+}
+
+.content-home {
+  max-width: 1100px;
+  border: 5px solid var(--cor-branca);
+  margin-top: 170px;
+}
+
+.titulo {
+  font-size: 8em;
+  font-weight: 300;
+  color: var(--cor-branca);
+  padding: 50px 0 50px 50px;
+}
+
+/* -----------------------Section About------------- */
+
+#about {
+  padding: 0 12%;
+}
+
+.image {
+  position: relative;
+}
+
+.image img {
+  max-width: 950px;
+  width: 100%;
+}
+
+.content-about {
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  background-color: var(--cor-branca);
+  padding: 150px;
+}
+
+.subtitulo-about {
+  font-size: 5em;
+  font-weight: 300;
+}
+
+.conteiner-about p {
+  font-size: 20px;
+  color: var(--cor-cinza);
+  max-width: 570px;
+}
+
+/* -----------------------Responsivo------------- */
+
+@media screen and (max-width: 375px) {
+  #home {
+    min-height: 100vh;
+    background: url(imagens/mobile/image-hero.jpg) no-repeat;
+    background-size: cover;
+    padding: 8% 8%;
+  }
+
+  .navbar i {
+    display: block;
+    font-size: 30px;
+    color: var(--cor-branca);
+  }
+
+  #nav-links {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-preta);
+    padding-top: 50%;
+    z-index: 1;
+  }
+
+  #nav-links a {
+    font-family: var(--font-padrao);
+    font-size: 30px;
+    font-weight: 300;
+    left: 2%;
+    text-transform: uppercase;
+  }
+
+  span#mobile {
+    display: block;
+    position: absolute;
+    top: 8%;
+    left: 8%;
+  }
+
+  #menu-close {
+    position: absolute;
+    top: 10%;
+    right: 8%;
+  }
+
+  .logo {
+    font-size: 2em;
+  }
+
+  .content-home {
+    max-width: 1100px;
+    border: 5px solid var(--cor-branca);
+    margin-top: 170px;
+  }
+
+  .titulo {
+    font-size: 2.7em;
+    font-weight: 300;
+    color: var(--cor-branca);
+    padding: 30px 30px 30px 15px;
+  }
+
+  /* -----------------------Section About------------- */
+
+  #about {
+    padding: 20% 12%;
+  }
+
+  .image {
+    position: relative;
+    z-index: 1;
+  }
+
+  .image img {
+    max-width: 950px;
+    width: 100%;
+  }
+
+  .subtitulo-about {
+    position: absolute;
+    top: 5%;
+    left: -20%;
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+
+  .conteiner-about p {
+    position: absolute;
+    top: 30%;
+    left: -50%;
+    font-size: 20px;
+    color: var(--cor-cinza);
+  }
+}
