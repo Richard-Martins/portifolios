@@ -61,16 +61,17 @@
     <script>
       var menuOpen = document.getElementById('menu-open')
       var menuClose = document.getElementById('menu-close')
+      var navlinks = document.getElementById('nav-links')
 
       menuOpen.addEventListener('click', toggleopen)
       menuClose.addEventListener('click', toggleclose)
 
       function toggleopen(){
-        document.getElementById('nav-links').style.top = '0'
-      }
-
-      function toggleclose(){
-        document.getElementById('nav-links').style.top = '-1  00%'
+        if(navlinks.style.top == '-100%'){
+          navlinks.style.top = '0'
+        }else{
+          navlinks.style.top = '-100%'
+        }
       }
 
 

@@ -103,10 +103,6 @@ span#mobile {
   padding: 0 12%;
 }
 
-.image {
-  position: relative;
-}
-
 .image img {
   max-width: 950px;
   width: 100%;
@@ -114,10 +110,10 @@ span#mobile {
 
 .content-about {
   position: absolute;
-  top: 140%;
-  left: 50%;
+  bottom: -60%;
+  left: 30%;
+  text-align: center;
   background-color: var(--cor-branca);
-  padding: 150px;
 }
 
 .subtitulo-about {
@@ -128,7 +124,6 @@ span#mobile {
 .conteiner-about p {
   font-size: 20px;
   color: var(--cor-cinza);
-  max-width: 570px;
 }
 
 /* -----------------------Responsivo------------- */
@@ -199,34 +194,4 @@ span#mobile {
   }
 
   /* -----------------------Section About------------- */
-
-  #about {
-    padding: 20% 12%;
-  }
-
-  .image {
-    position: relative;
-    z-index: 1;
-  }
-
-  .image img {
-    max-width: 950px;
-    width: 100%;
-  }
-
-  .subtitulo-about {
-    position: absolute;
-    top: 5%;
-    left: -20%;
-    font-size: 1.5em;
-    font-weight: 300;
-  }
-
-  .conteiner-about p {
-    position: absolute;
-    top: 30%;
-    left: -50%;
-    font-size: 20px;
-    color: var(--cor-cinza);
-  }
 }
