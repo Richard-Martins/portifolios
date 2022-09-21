@@ -9,11 +9,11 @@
 body {
   margin: 2% 8%;
   transition: 0.5s linear;
+  overflow-y: hidden;
 }
 
 body.active {
   background-color: #000;
-  color: #fff;
 }
 
 .navbar {
@@ -24,6 +24,10 @@ body.active {
 
 .navbar .logo {
   cursor: pointer;
+}
+
+.navbar.active .icon {
+  color: #fff;
 }
 
 #nav-links li {
@@ -63,23 +67,65 @@ body.active {
   height: 100%;
 }
 
-.darkMode {
+#nav-links.active a {
+  color: #fff;
+}
+
+#changeBg {
+  position: absolute;
+  right: 4%;
+  top: 6%;
+  width: 80px;
+  height: 35px;
+  background-color: #1e1c1b;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#changeBg #circle {
+  position: absolute;
+  top: 7%;
+  left: 3%;
   width: 30px;
   height: 30px;
-  background-color: #ff4321;
+  background-color: #fff;
   border-radius: 50%;
-  cursor: pointer;
+  z-index: 1;
+  transition: 0.3s linear;
 }
 
-#nav-links .icon {
-  display: none;
+#changeBg.active #circle {
+  left: 60%;
+}
+
+#changeBg #moon {
+  font-size: 24px;
+  position: absolute;
+  right: 7%;
+  top: 15%;
+  color: #5898f0;
+}
+
+#changeBg #sun {
+  font-size: 24px;
+  position: absolute;
+  left: 5%;
+  top: 15%;
+  color: #e08e28;
+}
+
+.icon {
   font-size: 30px;
   cursor: pointer;
+  transition: 0.5s linear;
 }
 
-#sidebar {
+#open-menu {
   display: none;
-  cursor: pointer;
+}
+
+#close-menu {
+  display: none;
 }
 
 /* --------------------------SECTION HOME------------------------ */
@@ -96,6 +142,10 @@ body.active {
   margin-bottom: 30px;
 }
 
+.titulo.active {
+  color: #fff;
+}
+
 .titulo span {
   color: #ff4321;
 }
@@ -107,6 +157,10 @@ body.active {
   margin-bottom: 50px;
 }
 
+.content p.active {
+  color: #fff;
+}
+
 .btn {
   font-size: 18px;
   font-weight: 600;
@@ -115,6 +169,24 @@ body.active {
   background-color: #1e1c1b;
   border-radius: 10px;
   padding: 10px 30px;
+}
+
+.btn.active {
+  background-color: #fff;
+  color: #1e1c1b;
+}
+
+.social-media {
+  margin-top: 30%;
+  margin-left: 20%;
+}
+
+.social-media i {
+  margin: 0 15px;
+}
+
+.social-media.active i {
+  color: #fff;
 }
 
 .pattern-image {
@@ -145,6 +217,10 @@ body.active {
 /* --------------------------RESPONSIVO------------------------------------ */
 
 @media screen and (max-width: 600px) {
+  body {
+    overflow-y: auto;
+  }
+
   .navbar {
     padding-top: 5%;
   }
@@ -176,44 +252,26 @@ body.active {
     display: none;
   }
 
-  #cross {
+  #changeBg {
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #close-menu {
     display: block;
     position: absolute;
     top: 5%;
-    right: 20%;
-    cursor: pointer;
-    transition: 0.5s linear;
+    right: 10%;
+    color: #fff;
   }
 
-  #cross #bar {
+  #open-menu {
     display: block;
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    border-radius: 5px;
-    margin: 5px 0;
   }
 
-  #cross .bar1 {
-    transform: translateY(-2px) rotate(45deg);
-  }
-
-  #cross .bar2 {
-    transform: translateY(-10px) rotate(-45deg);
-  }
-
-  #sidebar {
-    display: block;
-    cursor: pointer;
-  }
-
-  #sidebar .line {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: #ff4321;
-    border-radius: 5px;
-    margin: 5px 0;
+  #open-menu.active {
+    color: #fff;
   }
 
   /* ----------------------------------------SECTION HOME------------------------ */
