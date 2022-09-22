@@ -183,6 +183,11 @@ body.active {
 
 .social-media i {
   margin: 0 15px;
+  transition: 0.5s;
+}
+
+.social-media i:hover {
+  transform: translateY(-10px);
 }
 
 .social-media.active i {

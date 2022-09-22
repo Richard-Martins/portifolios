@@ -8,11 +8,11 @@ var paragrafo = document.getElementsByTagName("p")[0];
 var btn = document.querySelector(".btn");
 var socialMedia = document.querySelector(".social-media");
 var changeBg = document.getElementById("changeBg");
-var conteiner = document.querySelector(".conteiner");
+// var conteiner = document.querySelector(".conteiner");
 
 openMenu.addEventListener("click", openNavbar);
 closeMenu.addEventListener("click", closeNavbar);
-conteiner.addEventListener("click", touchOut);
+body.addEventListener("click", touchOut);
 changeBg.addEventListener("click", switchBg);
 
 function switchBg() {
