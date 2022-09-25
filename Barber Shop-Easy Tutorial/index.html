@@ -17,175 +17,234 @@
     <title>Barber Shop</title>
   </head>
   <body>
-        <section id="home">
-            <header>
-                <nav class="menu">
-                    <a href="#" class="logo">
-                        <img src="imagens/logo.png" alt="logo">
-                    </a>
-                    <ul id="nav-links">
-                        <li>
-                            <a href="#">home</a>
-                        </li>
-                        <li>
-                            <a href="#">features</a>
-                        </li>
-                        <li>
-                            <a href="#">services</a>
-                        </li>
-                        <li>
-                            <a href="#">testimonials</a>
-                        </li>
-                        <li>
-                            <a href="#">meet us</a>
-                        </li>
-                    </ul>
-                    <div id="bar-open">
-                        <span class="line" id="line1"></span>
-                        <span class="line" id="line2"></span>
-                        <span class="line" id="line3"></span>
-                    </div>
-                </nav>
-            </header>
+    <section id="home">
+      <header class="header">
+        <nav class="navbar">
+          <img src="imagens/logo.png" alt="logo" class="logo" />
+          <ul id="nav-links">
+            <i class="fa-solid fa-x" id="menu-x" onclick="toggleClose()"></i>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#features">FEATURES</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#testimonials">TESTIMONIALS</a></li>
+            <li><a href="#meet-us">MEET US</a></li>
+          </ul>
+          <i
+            class="fa-solid fa-bars"
+            id="menu-hamburger"
+            onclick="toggleOpen()"
+          ></i>
+        </nav>
+      </header>
+      <div class="home-text">
+        <h1 class="home-title">Hair Studio</h1>
+        <p>Style Your Hair is Styile Your LIfe</p>
+        <div class="btn-conteiner">
+          <a href="#" class="btn"><span></span> Find Out</a>
+          <a href="#" class="btn"><span></span> Read More</a>
+        </div>
+      </div>
+    </section>
 
-            <div class="home-conteiner">
-                <h1 class="titulo-home">
-                    Hair Studio
-                </h1>
-                <p class="subtitulo-home">
-                    Style Your Hair is Styile Your LIfe
-                </p>
-                <div class="btn-home">
-                    <a href="#">
-                       <span></span> Find Out
-                    </a>
+    <!-- ----------------SECTION FEATURES---------------- -->
+    <section id="features">
+      <div class="header-content" id="header-features">
+        <span class="logo-content">FEATURES</span>
+        <h2 class="title-content" id="title-features">Why Choose Us</h2>
+      </div>
+      <div class="features-box">
+        <div class="features">
+          <h3>Experinced Staff</h3>
+          <div class="features-desc">
+            <div class="features-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="features-text">
+              <p>
+                Donec eget ulricies sapi,sed porttitor, mauris ater lob
+                facillsis, elit sapie eleifend liguia.
+              </p>
+            </div>
+          </div>
 
-                    <a href="#">
-                       <span></span> Read More
-                    </a>
+          <h3>Pre Booking Online</h3>
+          <div class="features-desc">
+            <div class="features-icon">
+              <i class="fa fa-check-square-o"></i>
+            </div>
+            <div class="features-text">
+              <p>
+                Donec eget ulricies sapi,sed porttitor, mauris ater lob
+                facillsis, elit sapie eleifend liguia.
+              </p>
+            </div>
+          </div>
+
+          <h3>Affordable Cost</h3>
+          <div class="features-desc">
+            <div class="features-icon">
+              <i class="fa fa-inr"></i>
+            </div>
+            <div class="features-text">
+              <p>
+                Donec eget ulricies sapi,sed porttitor, mauris ater lob
+                facillsis, elit sapie eleifend liguia.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="features-img">
+          <img src="imagens/barber-man.jpg" alt="barber-man" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------SECTION SERVICES---------------- -->
+    <section id="services">
+      <div class="header-content" id="header-features">
+        <span class="logo-content">SERVICES</span>
+        <h2 class="title-content" id="title-features">We Provide Better</h2>
+      </div>
+      <div class="services-box">
+        <div class="services">
+            <div class="cards">
+                <img src="imagens/pic-1.jpg">
+                <div class="overlay"></div>
+                <div class="services-desc">
+                    <h3>Hair Styling</h3>
+                    <hr>
+                    <p>
+                        this is test under description of barber foundation this is test under description of barber foundation
+                    </p>
                 </div>
             </div>
-        </section>
 
-        <!-----------------------------features------------------------------>
-
-        <section id="features">
-                <div class="apresentaçao">
-                    <p class="logo-barber">
-                        Features
+            <div class="cards">
+                <img src="imagens/pic-2.jpg">
+                <div class="overlay"></div>
+                <div class="services-desc">
+                    <h3>Beard Trim</h3>
+                    <hr>
+                    <p>
+                        this is test under description of barber foundation this is test under description of barber foundation
                     </p>
-                    <h1 class="titulo-barber">
-                        Why Choose Us
-                    </h1>
                 </div>
-                
-                <div class="features-conteiner">
-                    <div class="features-content">
+            </div>
 
-                        <h2 class="subtitulo-features">
-                            Experinced Staff
-                        </h2>
-                        <p>
-                            Donec eget ulricies sapi,sed porttitor, mauris ater lob facillsis,<br>elit sapie eleifend liguia.
-                        </p>
-                        <h2 class="subtitulo-features">
-                            Pre Booking Online
-                        </h2>
-                        <p>
-                            Donec eget ulricies sapi,sed porttitor, mauris ater lob facillsis,<br>elit sapie eleifend liguia.
-                        </p>
-                        <h2 class="subtitulo-features">
-                            Affordable Cost
-                        </h2>
-                        <p>
-                            Donec eget ulricies sapi,sed porttitor, mauris ater lob facillsis,<br>elit sapie eleifend liguia.
-                        </p>
-                    </div>
-                    
-
-                    <div class="image-features">
-                        <img src="imagens/barber-man.jpg" alt="barber-man">
-                    </div>
-                </div>
-            </section>
-
-                <!----------------------------------services------------------------>
-
-            <section id="services">
-                <div class="apresentaçao">
-                    <p class="logo-barber">
-                        Services
+            <div class="cards">
+                <img src="imagens/pic-3.jpg">
+                <div class="overlay"></div>
+                <div class="services-desc">
+                    <h3>Hair Cut</h3>
+                    <hr>
+                    <p>
+                        this is test under description of barber foundation this is test under description of barber foundation
                     </p>
-                    <h1 class="titulo-barber">
-                        We Provide Better
-                    </h1>
                 </div>
+            </div>
 
-                <div class="cards-services">
-                    <div class="cards">
-                        <div class="single-card">
-                            <img src="imagens/pic-1.jpg">
-                            <div class="overlay"></div>
-                            <div class="services-desc">
-                                <h3>Hair Styling</h3>
-                                <hr>
-                                <p>
-                                    this is test under description of barber foundation this is test under description of barber foundation
-                                </p>
-                            </div>
-                        </div>
-                        <div class="single-card">
-                            <img src="imagens/pic-2.jpg">
-                            <div class="overlay"></div>
-                            <div class="services-desc">
-                                <h3>Beard Trim</h3>
-                                <hr>
-                                <p>
-                                    this is test under description of barber foundation this is test under description of barber foundation
-                                </p>
-                            </div>
-                        </div>
-                        <div class="single-card">
-                            <img src="imagens/pic-3.jpg">
-                            <div class="overlay"></div>
-                            <div class="services-desc">
-                                <h3>Hair Cut</h3>
-                                <hr>
-                                <p>
-                                    this is test under description of barber foundation this is test under  description of barber foundation
-                                </p>
-                            </div>
-                        </div>
-                        <div class="single-card">
-                            <img src="imagens/pic-4.jpg">
-                            <div class="overlay"></div>
-                            <div class="services-desc">
-                                <h3>Dry Shampoo</h3>
-                                <hr>
-                                <p>
-                                    this is test under description of barber foundation this is test under description of barber foundation
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-------------------------------Testional------------------------>
-
-            <section id="testional">
-                <div class="apresentaçao">
-                    <p class="logo-barber">
-                        Testimonial
+            <div class="cards">
+                <img src="imagens/pic-4.jpg">
+                <div class="overlay"></div>
+                <div class="services-desc">
+                    <h3>Dry Shampoo</h3>
+                    <hr>
+                    <p>
+                        this is test under description of barber foundation this is test under description of barber foundation
                     </p>
-                    <h1 class="titulo-barber">
-                        What Client Says
-                    </h1>
                 </div>
+            </div>
+      </div>
+    </section>
 
-                
-            </section>
-        </main>
+    <!-- ----------------SECTION TESTIMONIALS---------------- -->
+    <section id="testimonials">
+        <div class="header-content" id="header-features">
+            <span class="logo-content">TESTIMONIALS</span>
+            <h2 class="title-content" id="title-features">We Provide Better</h2>
+        </div>
+
+        <div class="testimonials-box">
+            <div class="testimonials">
+                <div class="testimonials-img">
+                    <img src="imagens/img-1.jpg" alt="image men">
+                </div>
+                <div class="testimonials-profile">
+                    <h3>KEN NORMAN <i class="fa-brands fa-twitter"></i></h3>
+                    <a href="#">@kennorman</a>
+                </div>
+            </div>
+                <div class="testimonials-desc">
+                    <p>
+                        Donec eget ultricies sapi porttitor, mauris ater lob facillsis, elit sapie eleifend ligula Donec eget ultricies sapi porttitor, mauris ater lob facillsis, elit sapie eleifend ligula Donec eget ultricies sapi porttitor, mauris ater lob facillsis.
+                    </p>
+                </div>
+        
+
+            <div class="testimonials">
+                <div class="testimonials-img">
+                    <img src="imagens/img-2.jpg" alt="image men">
+                </div>
+                <div class="testimonials-profile">
+                    <h3>Liara Karian<i class="fa-brands fa-twitter"></i></h3>
+                    <a href="#">@liarakarian</a>
+                </div>
+            </div>
+            <div class="testimonials-desc">
+                <p>
+                    Donec eget ultricies sapi porttitor, mauris ater lob facillsis, elit sapie eleifend ligula Donec eget ultricies sapi porttitor, mauris ater lob facillsis, elit sapie eleifend ligula Donec eget ultricies sapi porttitor, mauris ater lob facillsis.
+                </p>
+            </div>
+
+
+        <!-- <div class="testimonials-box">
+            <div class="testimonials">
+                <div class="testimonials-img">
+                    <img src="imagens/img-1.jpg" alt="image men">
+                </div>
+                <div class="testimonials-profile">
+                    <h3>KEN NORMAN <i class="fa-brands fa-twitter"></i></h3>
+                    <a href="#">@kennorman</a>
+                </div>
+            </div>
+            <div class="testimonials-desc">
+                    <p>
+                        Donec eget ultricies sapi porttitor, mauris ater lob facillsis, elit sapie eleifend ligula Donec eget ultricies sapi porttitor, mauris ater lob facillsis, elit sapie eleifend ligula Donec eget ultricies sapi porttitor, mauris ater lob facillsis.
+                    </p>
+            </div>
+
+            <div class="testimonials">
+                <div class="testimonials-img">
+                    <img src="imagens/img-2.jpg" alt="image men">
+                </div>
+                <div class="testimonials-profile">
+                    <h3>Liara Karian<i class="fa-brands fa-twitter"></i></h3>
+                    <a href="#">@liarakarian</a>
+                </div>
+            </div>
+            <div class="testimonials-desc">
+                <p>
+                    Donec eget ultricies sapi porttitor, mauris ater lob facillsis, elit sapie eleifend ligula Donec eget ultricies sapi porttitor, mauris ater lob facillsis, elit sapie eleifend ligula Donec eget ultricies sapi porttitor, mauris ater lob facillsis.
+                </p>
+            </div>
+
+            <div class="testimonials">
+                <div class="testimonials-img">
+                    <img src="imagens/img-3.jpg" alt="image men">
+                </div>
+                <div class="testimonials-profile">
+                    <h3>Ricky Danial <i class="fa-brands fa-twitter"></i></h3>
+                    <a href="#">@rickydanial</a>
+                </div>
+            </div>
+            <div class="testimonials-desc">
+                <p>
+                    Donec eget ultricies sapi porttitor, mauris ater lob facillsis, elit sapie eleifend ligula Donec eget ultricies sapi porttitor, mauris ater lob facillsis, elit sapie eleifend ligula Donec eget ultricies sapi porttitor, mauris ater lob facillsis.
+                </p>
+            </div>
+        </div> -->
+    </section>
+    <!-- ----------------SECTION MEET US---------------- -->
     <script src="script.js"></script>
   </body>
 </html>
