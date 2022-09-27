@@ -1,556 +1,548 @@
 /*--------------------------------Configuração Global--------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-:root{
-    --color-btn: #f9004d;
-    --color-paragrafo: #fcfc;
-    --color-destaque: #fff;
-    --bg-section: #1A1A1A;
-    --bg-section-odd: #101010;
+:root {
+  --color-btn: #f9004d;
+  --color-paragrafo: #fcfc;
+  --color-destaque: #fff;
+  --bg-section: #1a1a1a;
+  --bg-section-odd: #101010;
 }
 
-body,html{
-    scroll-behavior: smooth;
-    overflow-x: hidden;
+body,
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /*----------------------------------Header--------------------------*/
 
-#home{
-    min-height: 100vh;
-    min-width: 100vw;
-    background: url(imagem/background.jpg) center no-repeat;
-    background-size: cover;
-    padding: 3% 8%;
+#home {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: url(imagem/background.jpg) center no-repeat;
+  background-size: cover;
+  padding: 3% 8%;
 }
 
-.menu{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.menu .logo{
-    font-size: 40px;
-    color: var(--color-destaque);
-    cursor: pointer;
+.menu .logo {
+  font-size: 40px;
+  color: var(--color-destaque);
+  cursor: pointer;
 }
 
-span{
-    color: var(--color-btn);
+span {
+  color: var(--color-btn);
 }
 
-.menu li{
-    list-style: none;
-    display: inline-block;
-    margin: 30px;
+.menu li {
+  list-style: none;
+  display: inline-block;
+  margin: 30px;
 }
 
-.menu li a{
-    font-size: 18px;
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--color-destaque);
-    padding: 0 5px;
-    position: relative;
+.menu li a {
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-destaque);
+  padding: 0 5px;
+  position: relative;
 }
 
-.menu a::after{
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    transform: scale(0,1);
-    background: var(--color-btn);
-    transition: transform .5s ease;
-} 
-
-.menu a::before{
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    transform: scale(0,1);
-    background: var(--color-btn);
-    transition: transform .5s ease;
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  transform: scale(0, 1);
+  background: var(--color-btn);
+  transition: transform 0.5s ease;
 }
 
-.menu a:hover::before, .menu a:hover::after{
-    transform: scale(1,1)
+.menu a::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  transform: scale(0, 1);
+  background: var(--color-btn);
+  transition: transform 0.5s ease;
 }
 
-.btn{
-    font-size: 18px;
-    font-weight: 700;
-    text-decoration: none;
-    color: var(--color-destaque);
-    background-color: var(--color-btn);
-    border-radius: 30px;
-    outline: none;
-    border: 2px solid var(--color-btn);
-    padding: 10px 30px;
-    cursor: pointer;
-    transition: all .5s;
+.menu a:hover::before,
+.menu a:hover::after {
+  transform: scale(1, 1);
+}
+
+.btn {
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-destaque);
+  background-color: var(--color-btn);
+  border-radius: 30px;
+  outline: none;
+  border: 2px solid var(--color-btn);
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 
 /*----------------------------------Section Home--------------------------*/
 
-.content-home{
-    position: absolute;
-    left: 8%;
-    top: 40%;
-    color: var(--color-destaque);
+.content-home {
+  position: absolute;
+  left: 8%;
+  top: 40%;
+  color: var(--color-destaque);
 }
 
-.content-home h3{
-    font-size: 20px;
-    letter-spacing: 2px;
-    color: var(--color-paragrafo);
+.content-home h3 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: var(--color-paragrafo);
 }
 
-.content-home .titulo{
-    font-size: 75px;
-    margin: 20px 0;
+.content-home .titulo {
+  font-size: 75px;
+  margin: 20px 0;
 }
 
-.content-home h2{
-    font-size: 25px;
-    letter-spacing: 2px;
-    color: var(--color-destaque);
-    margin-bottom: 50px;
+.content-home h2 {
+  font-size: 25px;
+  letter-spacing: 2px;
+  color: var(--color-destaque);
+  margin-bottom: 50px;
 }
 
-.ipt-email{
-    font-size: 18px;
-    width: 500px;
-    border: 3px solid var(--color-btn);
-    outline: none;
-    border-radius: 30px;
-    padding: 20px;
-    position: relative;
+.ipt-email {
+  font-size: 18px;
+  width: 500px;
+  border: 3px solid var(--color-btn);
+  outline: none;
+  border-radius: 30px;
+  padding: 20px;
+  position: relative;
 }
 
-#btn-home{
-    position: absolute;
-    right: 40px;
-    bottom: 10px;
+#btn-home {
+  position: absolute;
+  right: 40px;
+  bottom: 10px;
 }
 
-#btn-mobile{
-    display: none;
+#btn-mobile {
+  display: none;
 }
 
-.scroll{
-    position: absolute;
-    bottom: 8%;
-    left: 50%;
-    transform: translateX(-50%);
-    cursor: pointer;
+.scroll {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
 }
 
-.btn-scroll{
-    font-size: 20px;
-    font-weight: 900;
-    text-decoration: none;
-    color: var(--color-destaque);
+.btn-scroll {
+  font-size: 20px;
+  font-weight: 900;
+  text-decoration: none;
+  color: var(--color-destaque);
 }
 
-.scroll i{
-    font-size: 20px;
-    color: var(--color-destaque);
-    position: absolute;
-    top: 40px;
-    left: 40%;
-    animation: shake 1s infinite alternate;
+.scroll i {
+  font-size: 20px;
+  color: var(--color-destaque);
+  position: absolute;
+  top: 40px;
+  left: 40%;
+  animation: shake 1s infinite alternate;
 }
 
-@keyframes shake{
-    from{
-        transform: translateY(-10px);
-    }
+@keyframes shake {
+  from {
+    transform: translateY(-10px);
+  }
 
-    to{
-        transform: translateY(10px);
-    }
+  to {
+    transform: translateY(10px);
+  }
 }
 
 /*----------------------------------Section About--------------------------*/
 
-#about{
-    min-width: 100vw;
-    min-height: 90vh;
-    background-color: var(--bg-section);
+#about {
+  min-width: 100vw;
+  min-height: 90vh;
+  background-color: var(--bg-section);
 }
 
-.conteiner-about{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
-    color: var(--color-destaque);
+.conteiner-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  color: var(--color-destaque);
 }
 
-.image{
-    margin-top: 100px;
+.image {
+  margin-top: 100px;
 }
 
-.my-photo{
-    max-width: 100%;
+.my-photo {
+  max-width: 100%;
 }
 
-.subtitulo{
-    font-size: 80px;
-    margin-bottom: 20px;
+.subtitulo {
+  font-size: 80px;
+  margin-bottom: 20px;
 }
 
-.content-about h3{
-    font-size: 25px;
-    margin-bottom: 20px;
+.content-about h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
 }
 
-.content-about p{
-    font-size: 18px;
-    text-align: justify;
-    line-height: 30px;
-    color: var(--color-paragrafo);
-    margin-bottom: 40px;
+.content-about p {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 30px;
+  color: var(--color-paragrafo);
+  margin-bottom: 40px;
 }
 
-#btn-hover:hover{
-    border: 2px solid var(--color-btn);
-    background-color: var(--bg-section);
+#btn-hover:hover {
+  border: 2px solid var(--color-btn);
+  background-color: var(--bg-section);
 }
 
 /*----------------------------------Section Services--------------------------*/
 
-#services{
-    min-width: 100vw;
-    min-height: 80vh;
-    background-color: var(--bg-section-odd);
+#services {
+  min-width: 100vw;
+  min-height: 80vh;
+  background-color: var(--bg-section-odd);
 }
 
-.conteiner-services{
-    padding:  100px 0 50px;
+.conteiner-services {
+  padding: 100px 0 50px;
 }
 
-.conteiner-services .subtitulo{
-    font-size: 80px;
-    text-align: center;
-    color: var(--color-destaque);
-    margin-bottom: 50px;
+.conteiner-services .subtitulo {
+  font-size: 80px;
+  text-align: center;
+  color: var(--color-destaque);
+  margin-bottom: 50px;
 }
 
-.sevices-cards{
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    gap: 30px;
+.sevices-cards {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  gap: 30px;
 }
 
-.card{
-    width: 400px;
-    height: 400px;
-    text-align: center;
-    background-color: var(--bg-section);
-    border-radius: 20px;
+.card {
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  background-color: var(--bg-section);
+  border-radius: 20px;
 }
 
-.card h3{
-    font-size: 25px;
-    color: var(--color-destaque);
-    margin-top: 100px;
-    margin-bottom: 20px;
+.card h3 {
+  font-size: 25px;
+  color: var(--color-destaque);
+  margin-top: 100px;
+  margin-bottom: 20px;
 }
 
-.card p{
-    text-align: center;
-    margin-bottom: 30px;
+.card p {
+  text-align: center;
+  margin-bottom: 30px;
 }
-
 
 /*----------------------------------Section Skills--------------------------*/
 
-#skills{
-    min-width: 100vw;
-    min-height: 40vh;
-    background-color: var(--bg-section);
-    text-align: center;
+#skills {
+  min-width: 100vw;
+  min-height: 40vh;
+  background-color: var(--bg-section);
+  text-align: center;
 }
 
-#skills .subtitulo{
-    font-size: 32px;
-    color: var(--color-destaque);
-    padding-top: 100px;
-    margin-bottom: 50px;
+#skills .subtitulo {
+  font-size: 32px;
+  color: var(--color-destaque);
+  padding-top: 100px;
+  margin-bottom: 50px;
 }
 
-p{
-    color: var(--color-paragrafo);
-    line-height: 30px;
+p {
+  color: var(--color-paragrafo);
+  line-height: 30px;
 }
 
 /*----------------------------------Section Contact--------------------------*/
 
-#contact{
-    min-width: 100vw;
-    min-height: 45vh;
-    background-color: var(--bg-section-odd);
-    text-align: center;
+#contact {
+  min-width: 100vw;
+  min-height: 45vh;
+  background-color: var(--bg-section-odd);
+  text-align: center;
 }
 
-#contact .subtitulo{
-    font-size: 32px;
-    color: var(--color-destaque);
-    padding-top: 100px;
-    margin-bottom: 50px;
+#contact .subtitulo {
+  font-size: 32px;
+  color: var(--color-destaque);
+  padding-top: 100px;
+  margin-bottom: 50px;
 }
 
-#contact p{
-    text-align: center;
-    padding: 0 10px;
-    margin-bottom: 20px;
+#contact p {
+  text-align: center;
+  padding: 0 10px;
+  margin-bottom: 20px;
 }
 
-#contact i{
-    font-size: 30px;
-    width: 50px;
-    height: 50px;
-    color: var(--color-destaque);
-    background-color: var(--color-btn);
-    border: 2px solid var(--color-btn);
-    border-radius: 50%;
-    padding-top: 10px;
-    margin: 10px;
-    cursor: pointer;
-    transition: all .5s;
+#contact i {
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  color: var(--color-destaque);
+  background-color: var(--color-btn);
+  border: 2px solid var(--color-btn);
+  border-radius: 50%;
+  padding-top: 10px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 
-#contact i:hover{
-    background-color: var(--bg-section-odd);
-    color: var(--color-btn);
+#contact i:hover {
+  background-color: var(--bg-section-odd);
+  color: var(--color-btn);
 }
 
-.footer{
-    min-height: 10vh;
-    background-color: var(--bg-section-odd);
-    margin-top: 40px;
+.footer {
+  min-height: 10vh;
+  background-color: var(--bg-section-odd);
+  margin-top: 40px;
 }
 
 /*----------------------------------Reponsivo--------------------------*/
 
-@media  screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
+  /*----------------------------------Section Home--------------------------*/
 
-    /*----------------------------------Section Home--------------------------*/
+  #home {
+    min-height: 100vh;
+    min-width: 100vw;
+    background: url(imagem/background.jpg) center no-repeat;
+    background-size: cover;
+    padding: 8% 8%;
+  }
 
-    #home{
-        min-height: 100vh;
-        min-width: 100vw;
-        background: url(imagem/background.jpg) center no-repeat;
-        background-size: cover;
-        padding: 8% 8%;
-    }
+  .menu .logo {
+    font-size: 30px;
+  }
 
-    .menu .logo{
-        font-size: 30px;
-    }
+  #menu-links {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-btn);
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
 
-    #menu-links{
-        position: absolute;
-        top: 0;
-        left: -100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        background-color: var(--color-btn);
-        z-index: 1;
-        overflow: hidden;
-        transition: all .5s;
-    }
+  #menu-links.active {
+    left: 0;
+  }
 
-    #menu-links.active{
-        left: 0;
-    }
+  .menu li {
+    margin: 20px;
+  }
 
-    .menu li {
-        margin: 20px;
-    }
+  .menu a::before,
+  .menu a::after {
+    background-color: var(--color-destaque);
+  }
 
-    .menu a::before, .menu a::after{
-        background-color: var(--color-destaque);
-    }
+  .menu .btn {
+    display: none;
+  }
 
-    .menu .btn{
-        display: none;
-    }
+  #sidebar {
+    cursor: pointer;
+    z-index: 2;
+  }
 
-    #sidebar{
-        cursor: pointer;
-        z-index: 2;
-    }
+  #sidebar .line {
+    width: 30px;
+    height: 3px;
+    background-color: var(--color-btn);
+    margin: 5px 0;
+    transition: all 0.5s;
+  }
 
-    #sidebar .line{
-        width: 30px;
-        height: 3px;
-        background-color: var(--color-btn);
-        margin: 5px 0;
-        transition: all .5s;
-    }
+  #sidebar.active #line1 {
+    transform: translateY(5px) rotate(310deg);
+    background-color: var(--color-destaque);
+  }
 
-    #sidebar.active #line1{
-        transform: translateY(5px) rotate(310deg);
-        background-color: var(--color-destaque);
-    }
+  #sidebar.active #line2 {
+    opacity: 0;
+  }
 
-    #sidebar.active #line2{
-        opacity: 0;
-    }
+  #sidebar.active #line3 {
+    transform: translateY(-11px) rotate(-310deg);
+    background-color: var(--color-destaque);
+  }
 
-    #sidebar.active #line3{
-        transform: translateY(-11px) rotate(-310deg);
-        background-color: var(--color-destaque);
-    }
+  .content-home {
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    color: var(--color-destaque);
+  }
 
-    .content-home{
-        position: absolute;
-        left: 8%;
-        top: 50%;
-        color: var(--color-destaque);
-    }
+  .content-home h3 {
+    font-size: 15px;
+  }
 
-    .content-home h3{
-        font-size: 15px;
-    }
+  .content-home .titulo {
+    font-size: 30px;
+    margin: 20px 0;
+  }
 
-    .content-home .titulo{
-        font-size: 30px;
-        margin: 20px 0;
-    }
+  .content-home h2 {
+    font-size: 20px;
+  }
 
-    .content-home h2{
-        font-size: 20px;
-    }
+  .ipt-email {
+    font-size: 17px;
+    width: 275px;
+    border: 3px solid var(--color-btn);
+    outline: none;
+    border-radius: 30px;
+    padding: 10px;
+    position: relative;
+  }
 
-    .ipt-email{
-        font-size: 17px;
-        width: 275px;
-        border: 3px solid var(--color-btn);
-        outline: none;
-        border-radius: 30px;
-        padding: 10px;
-        position: relative;
-    }
-    
-    #btn-home{
-        display: none;
-    }
+  #btn-home {
+    display: none;
+  }
 
-    #btn-mobile{
-        display: block;
-        position: absolute;
-        right: 18px;
-        bottom: 10px;
-        font-size: 20px;
-        color: var(--color-btn);
-        cursor: pointer;
-    }
+  #btn-mobile {
+    display: block;
+    position: absolute;
+    right: 18px;
+    bottom: 10px;
+    font-size: 20px;
+    color: var(--color-btn);
+    cursor: pointer;
+  }
 
-   /*----------------------------------Section About--------------------------*/
+  /*----------------------------------Section About--------------------------*/
 
-    .conteiner-about{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  .conteiner-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .my-photo{
-        max-width: 300px;
-        padding: 0 20px;
-    }
+  .my-photo {
+    max-width: 300px;
+    padding: 0 20px;
+  }
 
-    .subtitulo{
-        font-size: 40px;
-        text-align: center;
-        margin-top: -50px;
-    }
+  .subtitulo {
+    font-size: 40px;
+    text-align: center;
+    margin-top: -50px;
+  }
 
-    .content-about h3{
-        text-align: center;
-    }
-    
-    .content-about p{
-        font-size: 14px;
-        text-align: center;
-        line-height: 25px;
-        padding: 0 20px;
-    }
+  .content-about h3 {
+    text-align: center;
+  }
 
-    .content-about .btn{
-        display: block;
-        margin: 0 auto 100px ;
-    }
+  .content-about p {
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+    padding: 0 20px;
+  }
 
-    /*-------------------------------Section Services--------------------------*/
+  .content-about .btn {
+    display: block;
+    margin: 0 auto 100px;
+  }
 
-    .sevices-cards{
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 100px;
-    }
+  /*-------------------------------Section Services--------------------------*/
 
-    #services .subtitulo{
-        font-size: 40px;
-    }
+  .sevices-cards {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+  }
 
-    .card{
-        width: 300px;
-        height: 300px;
-        margin: 30px;
-    }
+  #services .subtitulo {
+    font-size: 40px;
+  }
 
-    .card h3{
-        margin-top: 50px;
-    }
+  .card {
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+  }
 
-    .card p{
-        font-size: 16px;
-        padding: 0 10px;
-    }
+  .card h3 {
+    margin-top: 50px;
+  }
 
-    /*----------------------------------Section Skills--------------------------*/
+  .card p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
 
-    #skills{
-        min-height: 50vh;
-    }
-    #skills .subtitulo{
-        font-size: 20px;
-    }
+  /*----------------------------------Section Skills--------------------------*/
 
-    #skills .btn{
-        margin-top: -20px;
-    }
+  #skills {
+    min-height: 50vh;
+  }
+  #skills .subtitulo {
+    font-size: 20px;
+  }
 
+  #skills .btn {
+    margin-top: -20px;
+  }
 }
-
-
-
-
-
-
-
-
