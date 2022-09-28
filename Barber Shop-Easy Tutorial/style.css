@@ -474,3 +474,8 @@ footer {
   cursor: pointer;
   transition: transform 0.5s;
 }
+
+footer p {
+  font-weight: 500;
+  margin: 20px 0;
+}
