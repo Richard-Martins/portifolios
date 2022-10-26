@@ -60,6 +60,12 @@ body {
   padding: 10px 30px;
 }
 
+#navbar i {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
 /* ----------------------------------SECTION-HOME----------------------------- */
 
 .home-conteiner {
@@ -75,21 +81,6 @@ body {
 .home-text .title {
   font-size: 6em;
   margin-top: -20px;
-  animation-name: title;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-}
-
-@keyframes title {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .home-text p {
@@ -97,22 +88,6 @@ body {
   max-width: 680px;
   width: 100%;
   margin: 30px 0px 60px;
-  animation-name: home-text;
-  animation-duration: 1s;
-  animation-delay: 1s;
-  animation-timing-function: ease;
-}
-
-@keyframes home-text {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .home-text .btn {
@@ -122,43 +97,11 @@ body {
   background: var(--color-btn);
   border-radius: 20px 0px 20px 20px;
   padding: 15px 60px;
-  animation-name: btn;
-  animation-duration: 1s;
-  animation-delay: 2s;
-  animation-timing-function: ease;
-}
-
-@keyframes btn {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .home-image {
   max-width: 700px;
   margin-top: 20px;
-  animation-name: image;
-  animation-duration: 1s;
-  animation-delay: 3s;
-  animation-timing-function: ease;
-}
-
-@keyframes image {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .home-image img {
