@@ -1,0 +1,33 @@
+/* ==================CONFIGURAÇÕES GLOBAIS====================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --color-btn: #f9004d;
+  --color-header: #000;
+  --color-destaque: #fff;
+  --bg-section: #1a1a1a;
+  --bg-section-odd: #101010;
+}
+/* ============================HEADER=========================== */
+
+/* ===========================SECTION HOME================== */
+#home {
+  min-height: 100vh;
+  background: url(img/background.jpg) center no-repeat;
+  background-size: cover;
+}
+/* ===========================SECTION ABOUT US================== */
+#about {
+  min-height: 100vh;
+}
+/* ==========================SECTION SERVICES=================== */
+/* =======================SECTION PORTFOLIO===================== */
+/* ========================SECTION BLOG========================= */
+/* =================SECTION CONTACT US========================  */
