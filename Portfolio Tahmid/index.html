@@ -5,18 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- ====================API================== -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
     />
+
     <title>Fully Responsive Personal Portfolio</title>
   </head>
   <body>
     <!-- ====================SECTION HEADER================== -->
-    <header id="header">
+    <header class="header">
       <nav id="navbar">
         <h4 class="logo">P.<span>folio</span></h4>
-        <ul id="nav-links">
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <i class="bx bx-x" id="menu-x"></i>
+        <ul id="navlist">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Services</a></li>
@@ -25,42 +31,238 @@
           <li><a href="#contact">Contact Us</a></li>
         </ul>
         <div class="registration">
-          <a href="#">Sign Up</a>
+          <a href="#" class="sign-up">Sign Up</a>
           <a href="#" class="sign-in">Sign In</a>
         </div>
       </nav>
     </header>
-    <!-- ====================SECTION HOME==================== -->
-    <section id="home">
-      <div class="content-home">
-        <h1 class="title">
-          I'm Tahmid <br />
-          <span>Web Developer</span>
-        </h1>
-        <h2 class="sub-title">USA BASEAD FREELANCER</h2>
-        <a href="#" class="btn">Read More</a>
-        <div class="content-complement">
-          <div class="text-complement">
-            <h5>5K+</h5>
-            <p>Global Happy Clients</p>
-          </div>
-          <div class="text-complement">
-            <h5>18K+</h5>
-            <p>Project Complet</p>
-          </div>
-          <div class="text-complement">
-            <h5>30K+</h5>
-            <p>Awards Winner</p>
+    <main>
+      <!-- ====================SECTION HOME==================== -->
+      <section id="home">
+        <div class="content-home">
+          <h1 class="title">
+            I'm Tahmid <br />
+            <span>Web Developer</span>
+          </h1>
+          <h2 class="sub-title">USA BASEAD FREELANCER</h2>
+          <a href="#" class="btn">Read More</a>
+          <div class="content-complement">
+            <div class="text-complement">
+              <h5>5K+</h5>
+              <p>Global Happy Clients</p>
+            </div>
+            <div class="text-complement">
+              <h5>18K+</h5>
+              <p>Project Complet</p>
+            </div>
+            <div class="text-complement">
+              <h5>30K+</h5>
+              <p>Awards Winner</p>
+            </div>
           </div>
         </div>
+      </section>
+      <!-- ====================SECTION ABOUT US============= -->
+      <section id="about">
+        <div class="conteiner-about">
+          <div class="image-about">
+            <img src="img/about.jpg" alt="image-about" />
+          </div>
+          <div class="text-about">
+            <h3>About Me</h3>
+            <h4>Developer <span>& Designer</span></h4>
+            <p>
+              I am front-end web developer. I can providence clean code and
+              pixel perfect designer. I asla make the website more & more
+              interactive with web animations. I can providence clean code an
+              pixel perfect design. I aslo make the website more & more
+              interactive with web animations. A responsive design makes your
+              website accessible to all users, regardlees of their device.
+            </p>
+            <a href="#" class="btn">Download CV</a>
+          </div>
+        </div>
+      </section>
+      <!-- ====================SECTION SERVICES================= -->
+      <section id="services">
+        <div class="header-section services">
+          <h4>Creative Service</h4>
+          <h3>Service I offer you</h3>
+          <p>
+            Experience that keep your custumers coming back for more information
+            about <br />
+            service Makes best effort
+          </p>
+        </div>
+        <div class="conteiner-services">
+          <div class="card-sevices">
+            <div class="card-text">
+              <i class="bx bx-mobile-alt"></i>
+              <h5>Web Designer</h5>
+              <p>
+                Experience that keep your customers coming back for more
+                information about service Makes best effort.
+              </p>
+            </div>
+          </div>
+          <div class="card-sevices">
+            <div class="card-text">
+              <i class="bx bx-layer"></i>
+              <h5>Web Designer</h5>
+              <p>
+                Experience that keep your customers coming back for more
+                information about service Makes best effort.
+              </p>
+            </div>
+          </div>
+          <div class="card-sevices">
+            <div class="card-text">
+              <i class="bx bx-line-chart"></i>
+              <h5>Web Designer</h5>
+              <p>
+                Experience that keep your customers coming back for more
+                information about service Makes best effort.
+              </p>
+            </div>
+          </div>
+          <div class="card-sevices">
+            <div class="card-text">
+              <i class="bx bx-laptop"></i>
+              <h5>Web Designer</h5>
+              <p>
+                Experience that keep your customers coming back for more
+                information about service Makes best effort.
+              </p>
+            </div>
+          </div>
+          <div class="card-sevices">
+            <div class="card-text">
+              <i class="bx bx-landscape"></i>
+              <h5>Web Designer</h5>
+              <p>
+                Experience that keep your customers coming back for more
+                information about service Makes best effort.
+              </p>
+            </div>
+          </div>
+          <div class="card-sevices">
+            <div class="card-text">
+              <i class="bx bx-camera"></i>
+              <h5>Web Designer</h5>
+              <p>
+                Experience that keep your customers coming back for more
+                information about service Makes best effort.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ====================SECTION PORTFOLIO================= -->
+      <section id="portfolio">
+        <div class="header-section portfolio">
+          <h4>Creative Portfolio</h4>
+          <h3>Solution we offer you</h3>
+          <p>
+            Experience that keep your custumers coming back for more information
+            about <br />
+            service Makes best effort
+          </p>
+        </div>
+        <div class="conteiner-portfolio">
+          <div class="card-portfolio">
+            <img src="img/work1.jpg" alt="work-portfolio" />
+            <div class="overlay"></div>
+            <div class="text-portfolio">
+              <h5>Web Business Plan</h5>
+            </div>
+          </div>
+          <div class="card-portfolio">
+            <img src="img/work2.jpg" alt="work-portfolio" />
+            <div class="overlay"></div>
+            <div class="text-portfolio">
+              <h5>Web Business Plan</h5>
+            </div>
+          </div>
+          <div class="card-portfolio">
+            <img src="img/work3.jpg" alt="work-portfolio" />
+            <div class="overlay"></div>
+            <div class="text-portfolio">
+              <h5>Web Business Plan</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ====================SECTION BLOG==================== -->
+      <section id="blog">
+        <div class="header-section blog">
+          <h4>Creative Blog</h4>
+          <h3>News insight</h3>
+          <p>
+            Experience that keep your custumers coming back for more information
+            about <br />
+            service Makes best effort
+          </p>
+        </div>
+        <div class="conteiner-blog">
+          <div class="card-blog">
+            <img src="img/blog1.jpg" alt="blog" />
+            <div class="text-blog">
+              <span>4 apr 2022</span>
+              <h5>Getting started with business level improved</h5>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+          <div class="card-blog">
+            <img src="img/blog2.jpg" alt="blog" />
+            <div class="text-blog">
+              <span>4 apr 2022</span>
+              <h5>Getting started with business level improved</h5>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+          <div class="card-blog">
+            <img src="img/blog3.jpg" alt="blog" />
+            <div class="text-blog">
+              <span>4 apr 2022</span>
+              <h5>Getting started with business level improved</h5>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ====================SECTION CONTACT US============== -->
+      <section id="contact">
+        <h3 class="contact-title">Subscribe for more html css website</h3>
+        <form autocomplete="" method="get">
+          <div class="input-box">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="Your Email"
+            />
+            <input type="submit" value="Subscribe" class="submit" />
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- ====================FOOTER========================= -->
+    <footer class="footer">
+      <div class="form-box">
+        <p>
+          &copy; 2022 All rights reserved | Design & Developer by Tahmid Ahmed
+        </p>
       </div>
-    </section>
-    <!-- ====================SECTION ABOUT US============= -->
-    <section id="about"></section>
-    <!-- ====================SECTION SERVICES================== -->
-    <!-- ====================SECTION PORTFOLIO================= -->
-    <!-- ====================SECTION BLOG==================== -->
-    <!-- ====================SECTION CONTACT US============== -->
-    <script src="scri|pt.js"></script>
+      <div class="social-media">
+        <i class="bx bxl-facebook"></i>
+        <i class="bx bxl-instagram"></i>
+        <i class="bx bxl-twitter"></i>
+      </div>
+    </footer>
+
+    <!-- ================LINKS JAVASCRIPT===================== -->
+    <script src="script.js"></script>
   </body>
 </html>
