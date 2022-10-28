@@ -21,7 +21,7 @@ body,
 html {
   scroll-behavior: smooth;
 }
-/* ============================HEADER=========================== */
+/* ======================SECTION HEADER======================== */
 #navbar {
   position: fixed;
   width: 100%;
@@ -38,6 +38,7 @@ html {
   font-size: 3rem;
   color: var(--color-destaque);
   cursor: pointer;
+  transition: 0.5s;
 }
 
 .logo span {
@@ -165,6 +166,12 @@ html {
   padding: 8% 15%;
 }
 
+.image-about img {
+  max-width: 490px;
+  max-height: 605px;
+  width: 100%;
+}
+
 .text-about h3 {
   font-size: 4rem;
   color: var(--color-title);
@@ -180,6 +187,7 @@ html {
 
 .text-about p {
   max-width: 580px;
+  width: 100%;
   line-height: 40px;
   color: var(--color-p);
   margin-bottom: 50px;
@@ -429,6 +437,8 @@ footer p {
 }
 
 /* =======================RESPONSIVO=======================  */
+
+/* ===============RESPONSIVO SECTION HEADER================== */
 @media screen and (max-width: 1180px) {
   #navlist {
     position: absolute;
@@ -491,7 +501,261 @@ footer p {
     display: none;
   }
 
-  /* ===========================SECTION HOME================== */
+  /* ===============RESPONSIVO SECTION HOME================== */
+  .content-home {
+    position: absolute;
+    top: 30%;
+    left: 2%;
+    color: var(--color-destaque);
+  }
+
+  /* ===============RESPONSIVO SECTION ABOUT US================ */
+  .conteiner-about {
+    justify-content: space-between;
+    padding: 15% 2%;
+  }
+
+  /* ===============RESPONSIVO SECTION SERVICES================ */
+  .header-section {
+    text-align: center;
+    padding: 10% 0% 10%;
+  }
+
+  .conteiner-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 2% 10%;
+  }
+
+  .card-sevices {
+    max-width: 300px;
+    max-height: 250px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 15px 15px 30px #d5d5d5, -15px -15px 30px #ebebeb;
+    cursor: pointer;
+    margin: 20px;
+    transition: 0.5s;
+  }
+
+  .card-text {
+    padding: 20px;
+  }
+
+  .card-text i {
+    font-size: 2rem;
+    color: var(--color-btn);
+    margin-bottom: 15px;
+  }
+
+  .card-text h5 {
+    font-size: 1.5rem;
+  }
+
+  /* ===============RESPONSIVO SECTION PORTFOLIO================ */
+  .conteiner-portfolio {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0% 2% 10%;
+  }
+
+  .card-portfolio {
+    max-width: 310px;
+    max-height: 430px;
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 94%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color-btn));
+    border-radius: 10px;
+    opacity: 0;
+    transition: 1s;
+  }
+
+  .text-portfolio {
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    transform: translateX(-43%);
+    opacity: 0;
+    transition: 1s;
+  }
+
+  .text-portfolio h5 {
+    font-size: 1.2em;
+    color: var(--color-destaque);
+  }
+
+  /* ===============RESPONSIVO SECTION BLOG================ */
+  #blog {
+    min-height: 100vh;
+    color: var(--bg-section);
+  }
+
+  .conteiner-blog {
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 2% 10%;
+  }
+
+  .card-blog {
+    max-width: 500px;
+    max-height: 430px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 15px 15px 30px #d5d5d5, -15px -15px 30px #ebebeb;
+    cursor: pointer;
+    margin: 20px;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+
+  .card-blog img {
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .text-blog {
+    margin: 5px 10px;
+  }
+
+  .text-blog span {
+    color: var(--color-p);
+  }
+
+  .text-blog h5 {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* =======================RESPONSIVO=======================  */
+
+/* ===============RESPONSIVO SECTION HOME================== */
+
+@media screen and (max-width: 992px) {
+  .title {
+    font-size: 5rem;
+    line-height: 120px;
+  }
+
+  /* ===============RESPONSIVO SECTION ABOUT US=============== */
+  .conteiner-about {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15% 2%;
+  }
+
+  .text-about {
+    text-align: center;
+  }
+
+  .text-about .btn {
+    position: absolute;
+    left: 45%;
+    transform: translateX(-45%);
+    margin-left: 30px;
+  }
+
+  /* ===============RESPONSIVO SECTION SERVICES=============== */
+  .conteiner-services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 2% 10%;
+  }
+
+  /* ===============RESPONSIVO SECTION PORTFOLIO=============== */
+  .conteiner-portfolio {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0% 2% 10%;
+  }
+
+  /* ===============RESPONSIVO SECTION BLOG=============== */
+
+  .text-blog h5 {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* =======================RESPONSIVO=======================  */
+
+/* ===============RESPONSIVO SECTION BLOG=============== */
+@media screen and (max-width: 768px) {
+  .conteiner-blog {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10% 2%;
+  }
+
+  .card-blog {
+    max-width: 410px;
+    max-height: 480px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 15px 15px 30px #d5d5d5, -15px -15px 30px #ebebeb;
+    cursor: pointer;
+    margin: 50px 0;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+
+  .text-blog h5 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  /* ===============RESPONSIVO SECTION BLOG=============== */
+  #contact {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-title);
+    padding-top: 10%;
+  }
+
+  #contact h3 {
+    font-size: 2rem;
+    color: var(--color-destaque);
+    margin-bottom: 30px;
+  }
+
+  input[type="email"] {
+    font-size: 16px;
+    max-width: 500px;
+    padding: 15px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+  }
+
+  /* =================RESPONSIVO FORM========================  */
+
+  footer p {
+    font-size: 15px;
+    color: var(--color-p);
+  }
+}
+
+/* =======================RESPONSIVO=======================  */
+
+/* =======================RESPONSIVO HOME====================  */
+@media screen and (max-width: 600px) {
   .content-home {
     position: absolute;
     top: 30%;
@@ -499,10 +763,132 @@ footer p {
     color: var(--color-destaque);
   }
 
-  /* ===========================SECTION ABOUT US================ */
+  .title {
+    font-size: 4rem;
+    line-height: 100px;
+  }
+
+  .content-complement {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 35%;
+  }
+
+  .text-complement {
+    margin-right: 45px;
+  }
+
+  .text-complement h5 {
+    font-size: 1.5rem;
+  }
+
+  /* ==================RESPONSIVO ABOUT US====================  */
   .conteiner-about {
+    padding: 20% 0;
+  }
+
+  .text-about h3 {
+    font-size: 3rem;
+    color: var(--color-title);
+  }
+
+  .text-about h4 {
+    font-size: 1.3rem;
+    color: var(--color-title);
+  }
+
+  .text-about p {
+    font-size: 14px;
+  }
+
+  .image-about img {
+    max-width: 400px;
+    max-height: 500px;
+    width: 100%;
+  }
+
+  /* ==================RESPONSIVO SERVICES====================  */
+  .header-section {
+    text-align: center;
+    padding: 15% 0 4%;
+  }
+
+  .header-section h3 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: var(--color-title);
+  }
+
+  .header-section p {
+    font-size: 14px;
+    color: var(--color-p);
+  }
+
+  .conteiner-services {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    background-color: rebeccapurple;
-    padding: 8% 5%;
+    padding: 0% 15%;
+  }
+
+  .card-sevices {
+    max-width: 500px;
+    max-height: 500px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 15px 15px 30px #d5d5d5, -15px -15px 30px #ebebeb;
+    cursor: pointer;
+    margin: 20px;
+    transition: 0.5s;
+  }
+
+  .card-text {
+    padding: 40px 50px;
+  }
+
+  .card-text i {
+    font-size: 3rem;
+    color: var(--color-btn);
+    margin-bottom: 15px;
+  }
+
+  .card-text h5 {
+    font-size: 2rem;
+  }
+  .card-text p {
+    line-height: 30px;
+    max-width: 350px;
+    color: var(--color-p);
+  }
+
+  /* ==================RESPONSIVO PORTFOLIO====================  */
+  .conteiner-portfolio {
+    padding: 15%;
+  }
+
+  /* ==================RESPONSIVO PORTFOLIO====================  */
+  #contact {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-title);
+    padding-top: 10%;
+  }
+
+  #contact h3 {
+    font-size: 1.5rem;
+    color: var(--color-destaque);
+    margin-bottom: 30px;
+  }
+
+  /* ==================RESPONSIVO FORM====================  */
+  footer {
+    flex-direction: column;
+  }
+
+  .form-box {
+    margin-bottom: 30px;
   }
 }
