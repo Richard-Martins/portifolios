@@ -9,473 +9,92 @@
 }
 
 :root {
-  --color-btn: #f9004d;
-  --color-header: #000;
-  --color-destaque: #fff;
+  --color-pink: #f9004d;
+  --color-black: #000;
+  --color-white: #fff;
   --color-title: #1a1a1a;
   --color-p: rgb(88, 86, 86);
   --bg-section-odd: #101010;
+  --bg-purple: #663399;
 }
 
-body,
-html {
+body {
   scroll-behavior: smooth;
 }
-/* ======================SECTION HEADER======================== */
-#navbar {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1% 6%;
-  z-index: 2;
-  transition: 0.5s;
-}
 
-.logo {
-  font-size: 3rem;
-  color: var(--color-destaque);
-  cursor: pointer;
-  transition: 0.5s;
-}
+@media screen and (max-width: 600px) {
+  /* ==================SECTION HEADER====================== */
+  #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-black);
+    padding: 2% 4%;
+    z-index: 2;
+    transition: all 0.5s;
+  }
+
+  #navbar.sticky {
+    padding: 1% 4%;
+  }
+
+  .logo {
+    font-size: 2em;
+    color: var(--color-white);
+    cursor: pointer;
+  }
+
+  .destaque {
+    color: var(--color-pink);
+  }
 
-.logo span {
-  color: var(--color-btn);
-}
-
-#navlist li {
-  display: inline-block;
-  list-style: none;
-  margin: 0 20px;
-}
-
-#navlist a {
-  font-size: 1.2rem;
-  text-decoration: none;
-  color: var(--color-destaque);
-  padding: 0 5px;
-  position: relative;
-}
-
-#navlist a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-btn);
-  transition: 0.5s;
-}
-
-#navlist a:hover::after {
-  width: 100%;
-}
-
-.registration a {
-  font-size: 1.2rem;
-  text-decoration: none;
-  color: var(--color-destaque);
-  margin: 0 20px;
-}
-
-.sign-in {
-  border: 2px solid var(--color-btn);
-  background-color: var(--color-btn);
-  border-radius: 50px;
-  padding: 10px 30px;
-  transition: 0.5s;
-}
-
-.sign-in:hover {
-  background-color: transparent;
-}
-
-/* ===========================SECTION HOME================== */
-#home {
-  min-height: 100vh;
-  background: url(img/background.jpg) center no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-}
-
-.content-home {
-  position: absolute;
-  top: 30%;
-  left: 15%;
-  color: var(--color-destaque);
-}
-
-.title {
-  font-size: 6rem;
-  line-height: 120px;
-}
-
-.title span {
-  color: var(--color-btn);
-}
-
-.sub-title {
-  margin: 50px 0;
-}
-
-.btn {
-  position: absolute;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--color-destaque);
-  border: 2px solid var(--color-btn);
-  background-color: var(--color-btn);
-  border-radius: 50px;
-  padding: 10px 30px;
-  transition: 0.5s;
-}
-
-.btn:hover {
-  transform: translateY(-10px);
-  background-color: transparent;
-  color: var(--color-btn);
-}
-
-.content-complement {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 25%;
-}
-
-.text-complement {
-  margin-right: 100px;
-}
-
-.text-complement h5 {
-  font-size: 2rem;
-}
-/* ===========================SECTION ABOUT US================== */
-#about {
-  min-height: 100vh;
-}
-
-.conteiner-about {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 8% 15%;
-}
-
-.image-about img {
-  max-width: 490px;
-  max-height: 605px;
-  width: 100%;
-}
-
-.text-about h3 {
-  font-size: 4rem;
-  color: var(--color-title);
-}
-.text-about h4 {
-  font-size: 1.5rem;
-  color: var(--color-title);
-}
-
-.text-about h4 span {
-  color: var(--color-btn);
-}
-
-.text-about p {
-  max-width: 580px;
-  width: 100%;
-  line-height: 40px;
-  color: var(--color-p);
-  margin-bottom: 50px;
-}
-
-.text-about .btn {
-  margin-left: 30px;
-}
-
-/* ==========================SECTION SERVICES=================== */
-#services {
-  min-height: 100vh;
-}
-
-.header-section {
-  text-align: center;
-  padding: 6% 0 4%;
-}
-
-.header-section h4 {
-  color: var(--color-btn);
-}
-
-.header-section h3 {
-  font-size: 4rem;
-  margin-bottom: 30px;
-  color: var(--color-title);
-}
-
-.header-section p {
-  color: var(--color-p);
-}
-
-.conteiner-services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 0% 15%;
-}
-
-.card-sevices {
-  width: 400px;
-  height: 300px;
-  border-radius: 20px;
-  box-shadow: 15px 15px 30px #d5d5d5, -15px -15px 30px #ebebeb;
-  cursor: pointer;
-  margin: 20px;
-  transition: 0.5s;
-}
-
-.card-sevices:hover {
-  box-shadow: 15px 15px 30px #bcbcbc, -15px -15px 30px #ffffff;
-}
-
-.card-text {
-  padding: 40px 50px;
-}
-
-.card-text i {
-  font-size: 3rem;
-  color: var(--color-btn);
-  margin-bottom: 15px;
-}
-
-.card-text h5 {
-  font-size: 2rem;
-}
-
-.card-text p {
-  line-height: 30px;
-  max-width: 350px;
-  color: var(--color-p);
-}
-
-/* =======================SECTION PORTFOLIO===================== */
-#portfolio {
-  min-height: 100vh;
-  color: var(--bg-section);
-}
-
-.conteiner-portfolio {
-  display: flex;
-  justify-content: space-between;
-  padding: 0% 15%;
-}
-
-.card-portfolio {
-  width: 410px;
-  height: 530px;
-  cursor: pointer;
-  position: relative;
-}
-
-.card-portfolio img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color-btn));
-  border-radius: 10px;
-  opacity: 0;
-  transition: 1s;
-}
-
-.card-portfolio:hover .overlay {
-  opacity: 1;
-}
-
-.text-portfolio {
-  position: absolute;
-  bottom: 0;
-  left: 43%;
-  transform: translateX(-43%);
-  opacity: 0;
-  transition: 1s;
-}
-
-.text-portfolio h5 {
-  font-size: 1.5em;
-  color: var(--color-destaque);
-}
-
-.card-portfolio:hover .text-portfolio {
-  bottom: 45%;
-  opacity: 1;
-}
-/* ========================SECTION BLOG========================= */
-#blog {
-  min-height: 100vh;
-  color: var(--bg-section);
-}
-
-.conteiner-blog {
-  display: flex;
-  justify-content: space-between;
-  padding: 0% 15%;
-}
-
-.card-blog {
-  width: 410px;
-  height: 480px;
-  border-radius: 20px;
-  box-shadow: 15px 15px 30px #d5d5d5, -15px -15px 30px #ebebeb;
-  cursor: pointer;
-  margin: 20px;
-  transition: 0.5s;
-}
-
-.card-blog:hover {
-  box-shadow: 15px 15px 30px #bcbcbc, -15px -15px 30px #ffffff;
-}
-
-.card-blog img {
-  border-radius: 20px 20px 0px 0px;
-}
-
-.text-blog {
-  margin: 15px;
-}
-
-.text-blog span {
-  color: var(--color-p);
-}
-
-.text-blog h5 {
-  font-size: 1.5rem;
-  margin-bottom: 50px;
-}
-
-.text-blog a {
-  text-decoration: none;
-  color: var(--color-p);
-}
-/* =================SECTION CONTACT US========================  */
-#contact {
-  min-height: 40vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--color-title);
-  padding-top: 6%;
-}
-
-#contact h3 {
-  font-size: 2.5rem;
-  color: var(--color-destaque);
-  margin-bottom: 30px;
-}
-
-form {
-  position: relative;
-}
-
-input[type="email"] {
-  font-size: 16px;
-  width: 450px;
-  padding: 15px;
-  border-radius: 30px;
-  outline: none;
-  border: none;
-}
-
-#contact .submit {
-  position: absolute;
-  right: 10px;
-  bottom: 5px;
-  font-size: 1.2rem;
-  text-decoration: none;
-  color: var(--color-destaque);
-  border: 2px solid var(--color-btn);
-  background-color: var(--color-btn);
-  border-radius: 50px;
-  cursor: pointer;
-  padding: 5px 20px;
-}
-
-/* =================FORM========================  */
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 3%;
-}
-
-footer p {
-  color: var(--color-p);
-}
-
-.social-media i {
-  font-size: 20px;
-  background-color: var(--color-btn);
-  color: var(--color-destaque);
-  border-radius: 50%;
-  padding: 10px;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.social-media i:hover {
-  transform: translateY(-10px);
-}
-
-/* =======================RESPONSIVO=======================  */
-
-/* ===============RESPONSIVO SECTION HEADER================== */
-@media screen and (max-width: 1180px) {
   #navlist {
     position: absolute;
     top: -2000%;
     left: 0;
+    right: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 600px;
-    background-color: var(--color-btn);
-    transition: 0.5s;
+    background-color: var(--color-pink);
+    padding: 0 0 70px 5%;
+    z-index: 2;
+    transition: 0.8s;
   }
 
   #navlist li {
-    display: inline-block;
-    margin: 40px 30px;
+    list-style-type: none;
+    margin: 50px 0;
   }
 
   #navlist a {
-    font-size: 15px;
-    font-weight: 600;
     position: absolute;
-    right: 30px;
-    left: 30px;
-    border-left: 3px solid var(--color-destaque);
-    padding: 15px 0;
-    padding-left: 20px;
-    transition: 0.5s;
+    width: 90%;
+    font-size: 18px;
+    text-decoration: none;
+    border-left: 2px solid var(--color-white);
+    color: var(--color-white);
+    padding: 15px;
+    transition: all 0.5s;
   }
 
   #navlist a:hover {
-    background-color: var(--color-destaque);
-    color: var(--color-header);
+    color: var(--color-black);
+    background-color: var(--color-white);
   }
 
-  #navlist a::after {
-    background-color: none;
+  #navbar i {
+    font-size: 30px;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: all 0.8s;
+  }
+
+  #menu-x {
+    display: none;
   }
 
   .sign-up {
@@ -483,412 +102,216 @@ footer p {
   }
 
   .sign-in {
-    border: 2px solid var(--color-btn);
-    background-color: var(--color-btn);
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--color-pink);
+    border: 2px solid var(--color-pink);
     border-radius: 50px;
-    padding: 5px 20px;
-    transition: 0.5s;
+    padding: 5px 15px;
+    transition: all 0.5s;
   }
 
-  #navbar i {
-    font-size: 30px;
-    color: var(--color-destaque);
-    transition: 0.5s;
-    cursor: pointer;
+  .sign-in:hover {
+    background-color: transparent;
   }
 
-  #menu-x {
-    display: none;
-  }
-
-  /* ===============RESPONSIVO SECTION HOME================== */
-  .content-home {
-    position: absolute;
-    top: 30%;
-    left: 2%;
-    color: var(--color-destaque);
-  }
-
-  /* ===============RESPONSIVO SECTION ABOUT US================ */
-  .conteiner-about {
-    justify-content: space-between;
-    padding: 15% 2%;
-  }
-
-  /* ===============RESPONSIVO SECTION SERVICES================ */
-  .header-section {
-    text-align: center;
-    padding: 10% 0% 10%;
-  }
-
-  .conteiner-services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 2% 10%;
-  }
-
-  .card-sevices {
-    max-width: 300px;
-    max-height: 250px;
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 15px 15px 30px #d5d5d5, -15px -15px 30px #ebebeb;
-    cursor: pointer;
-    margin: 20px;
-    transition: 0.5s;
-  }
-
-  .card-text {
-    padding: 20px;
-  }
-
-  .card-text i {
-    font-size: 2rem;
-    color: var(--color-btn);
-    margin-bottom: 15px;
-  }
-
-  .card-text h5 {
-    font-size: 1.5rem;
-  }
-
-  /* ===============RESPONSIVO SECTION PORTFOLIO================ */
-  .conteiner-portfolio {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 0% 2% 10%;
-  }
-
-  .card-portfolio {
-    max-width: 310px;
-    max-height: 430px;
-    width: 100%;
-    cursor: pointer;
-    position: relative;
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 94%;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color-btn));
-    border-radius: 10px;
-    opacity: 0;
-    transition: 1s;
-  }
-
-  .text-portfolio {
-    position: absolute;
-    bottom: 0;
-    left: 40%;
-    transform: translateX(-43%);
-    opacity: 0;
-    transition: 1s;
-  }
-
-  .text-portfolio h5 {
-    font-size: 1.2em;
-    color: var(--color-destaque);
-  }
-
-  /* ===============RESPONSIVO SECTION BLOG================ */
-  #blog {
+  /* ==================SECTION HOME====================== */
+  #home {
     min-height: 100vh;
-    color: var(--bg-section);
+    background: url(img/background.jpg) center no-repeat;
+    background-size: cover;
   }
 
-  .conteiner-blog {
+  .container-home {
+    padding: 50% 2%;
+  }
+
+  .content-home {
+    color: var(--color-white);
+  }
+
+  .content-home h1 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .content-home h2 {
+    margin: 50px 0;
+  }
+
+  .btn {
+    position: absolute;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--color-pink);
+    border: 2px solid var(--color-pink);
+    border-radius: 50px;
+    padding: 15px 30px;
+    transition: all 0.5s;
+  }
+
+  .btn:hover {
+    color: var(--color-pink);
+    background-color: transparent;
+    transform: translateY(-10px);
+  }
+
+  .supplementary-data {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 0% 2% 10%;
+    flex-wrap: wrap;
+    padding-top: 200px;
   }
 
-  .card-blog {
-    max-width: 500px;
-    max-height: 430px;
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 15px 15px 30px #d5d5d5, -15px -15px 30px #ebebeb;
-    cursor: pointer;
-    margin: 20px;
-    transition: 0.5s;
-    overflow: hidden;
+  .data-home {
+    margin: 0 10px 20px;
   }
 
-  .card-blog img {
-    border-radius: 20px 20px 0px 0px;
+  .supplementary-data h5 {
+    font-size: 30px;
   }
 
-  .text-blog {
-    margin: 5px 10px;
+  /* ==================SECTION ABOUT====================== */
+  #about {
+    min-height: 100vh;
+    margin: 10% 2%;
+    color: var(--color-title);
   }
 
-  .text-blog span {
+  .container-about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .content-img {
+    margin-bottom: 30px;
+  }
+
+  .content-about h3 {
+    font-size: 40px;
+  }
+
+  .content-about h4 {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  .content-about p {
+    text-align: justify;
+    color: var(--color-p);
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+  /* ==================SECTION SERVICES====================== */
+  #services {
+    min-height: 100vh;
     color: var(--color-p);
   }
 
-  .text-blog h5 {
+  .header-container {
     text-align: center;
-    font-size: 1.1rem;
+    padding: 15% 2%;
+  }
+
+  .header-container h4 {
+    color: var(--color-pink);
+    margin-bottom: 20px;
+  }
+
+  .header-container h3 {
+    font-size: 40px;
+    color: var(--color-title);
+    margin-bottom: 20px;
+  }
+
+  .header-container p {
+    font-size: 14.2px;
+  }
+
+  .container-services {
+    padding: 10% 2%;
+    background-color: var(--bg-purple);
+  }
+
+  .content-card-services {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card-services {
+    width: 400px;
+    height: 260px;
+    border-radius: 18px;
+    background: #e0e0e0;
+    background-color: yellow;
+    box-shadow: 30px 30px 60px #bcbcbc, -30px -30px 60px #ffffff;
+  }
+
+  .text-services {
+    padding: 30px 20px;
+  }
+
+  .card-services i {
+    font-size: 50px;
+    color: var(--color-pink);
     margin-bottom: 30px;
   }
+
+  .card-services h5 {
+    font-size: 30px;
+    color: var(--color-title);
+    margin-bottom: 20px;
+  }
+
+  .card-services p {
+  }
+  /* ==================SECTION PORTFOLIO====================== */
+  /* BG-OVERLAY linear-gradient(rgba(0, 0, 0, 0.1), var(--color-btn)); */
+  /* ==================SECTION BLOG====================== */
+  /* ==================SECTION CONTACT====================== */
+  /* ==================SECTION FOOTER====================== */
+  /* ==================RESPONSIVO====================== */
 }
 
-/* =======================RESPONSIVO=======================  */
-
-/* ===============RESPONSIVO SECTION HOME================== */
+@media screen and (max-width: 768px) {
+  /* ==================SECTION HEADER====================== */
+  /* ==================SECTION HOME====================== */
+  /* ==================SECTION ABOUT====================== */
+  /* ==================SECTION SERVICES====================== */
+  /* ==================SECTION PORTFOLIO====================== */
+  /* ==================SECTION BLOG====================== */
+  /* ==================SECTION CONTACT====================== */
+  /* ==================SECTION FOOTER====================== */
+  /* ==================RESPONSIVO====================== */
+}
 
 @media screen and (max-width: 992px) {
-  .title {
-    font-size: 5rem;
-    line-height: 120px;
-  }
-
-  /* ===============RESPONSIVO SECTION ABOUT US=============== */
-  .conteiner-about {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 15% 2%;
-  }
-
-  .text-about {
-    text-align: center;
-  }
-
-  .text-about .btn {
-    position: absolute;
-    left: 45%;
-    transform: translateX(-45%);
-    margin-left: 30px;
-  }
-
-  /* ===============RESPONSIVO SECTION SERVICES=============== */
-  .conteiner-services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 0 2% 10%;
-  }
-
-  /* ===============RESPONSIVO SECTION PORTFOLIO=============== */
-  .conteiner-portfolio {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    padding: 0% 2% 10%;
-  }
-
-  /* ===============RESPONSIVO SECTION BLOG=============== */
-
-  .text-blog h5 {
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 30px;
-  }
+  /* ==================SECTION HEADER====================== */
+  /* ==================SECTION HOME====================== */
+  /* ==================SECTION ABOUT====================== */
+  /* ==================SECTION SERVICES====================== */
+  /* ==================SECTION PORTFOLIO====================== */
+  /* ==================SECTION BLOG====================== */
+  /* ==================SECTION CONTACT====================== */
+  /* ==================SECTION FOOTER====================== */
+  /* ==================RESPONSIVO====================== */
 }
 
-/* =======================RESPONSIVO=======================  */
-
-/* ===============RESPONSIVO SECTION BLOG=============== */
-@media screen and (max-width: 768px) {
-  .conteiner-blog {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10% 2%;
-  }
-
-  .card-blog {
-    max-width: 410px;
-    max-height: 480px;
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 15px 15px 30px #d5d5d5, -15px -15px 30px #ebebeb;
-    cursor: pointer;
-    margin: 50px 0;
-    transition: 0.5s;
-    overflow: hidden;
-  }
-
-  .text-blog h5 {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-  }
-
-  /* ===============RESPONSIVO SECTION BLOG=============== */
-  #contact {
-    min-height: 40vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--color-title);
-    padding-top: 10%;
-  }
-
-  #contact h3 {
-    font-size: 2rem;
-    color: var(--color-destaque);
-    margin-bottom: 30px;
-  }
-
-  input[type="email"] {
-    font-size: 16px;
-    max-width: 500px;
-    padding: 15px;
-    border-radius: 30px;
-    outline: none;
-    border: none;
-  }
-
-  /* =================RESPONSIVO FORM========================  */
-
-  footer p {
-    font-size: 15px;
-    color: var(--color-p);
-  }
-}
-
-/* =======================RESPONSIVO=======================  */
-
-/* =======================RESPONSIVO HOME====================  */
-@media screen and (max-width: 600px) {
-  .content-home {
-    position: absolute;
-    top: 30%;
-    left: 5%;
-    color: var(--color-destaque);
-  }
-
-  .title {
-    font-size: 4rem;
-    line-height: 100px;
-  }
-
-  .content-complement {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: 35%;
-  }
-
-  .text-complement {
-    margin-right: 45px;
-  }
-
-  .text-complement h5 {
-    font-size: 1.5rem;
-  }
-
-  /* ==================RESPONSIVO ABOUT US====================  */
-  .conteiner-about {
-    padding: 20% 0;
-  }
-
-  .text-about h3 {
-    font-size: 3rem;
-    color: var(--color-title);
-  }
-
-  .text-about h4 {
-    font-size: 1.3rem;
-    color: var(--color-title);
-  }
-
-  .text-about p {
-    font-size: 14px;
-  }
-
-  .image-about img {
-    max-width: 400px;
-    max-height: 500px;
-    width: 100%;
-  }
-
-  /* ==================RESPONSIVO SERVICES====================  */
-  .header-section {
-    text-align: center;
-    padding: 15% 0 4%;
-  }
-
-  .header-section h3 {
-    font-size: 3rem;
-    margin-bottom: 30px;
-    color: var(--color-title);
-  }
-
-  .header-section p {
-    font-size: 14px;
-    color: var(--color-p);
-  }
-
-  .conteiner-services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0% 15%;
-  }
-
-  .card-sevices {
-    max-width: 500px;
-    max-height: 500px;
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 15px 15px 30px #d5d5d5, -15px -15px 30px #ebebeb;
-    cursor: pointer;
-    margin: 20px;
-    transition: 0.5s;
-  }
-
-  .card-text {
-    padding: 40px 50px;
-  }
-
-  .card-text i {
-    font-size: 3rem;
-    color: var(--color-btn);
-    margin-bottom: 15px;
-  }
-
-  .card-text h5 {
-    font-size: 2rem;
-  }
-  .card-text p {
-    line-height: 30px;
-    max-width: 350px;
-    color: var(--color-p);
-  }
-
-  /* ==================RESPONSIVO PORTFOLIO====================  */
-  .conteiner-portfolio {
-    padding: 15%;
-  }
-
-  /* ==================RESPONSIVO PORTFOLIO====================  */
-  #contact {
-    min-height: 30vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--color-title);
-    padding-top: 10%;
-  }
-
-  #contact h3 {
-    font-size: 1.5rem;
-    color: var(--color-destaque);
-    margin-bottom: 30px;
-  }
-
-  /* ==================RESPONSIVO FORM====================  */
-  footer {
-    flex-direction: column;
-  }
-
-  .form-box {
-    margin-bottom: 30px;
-  }
+@media screen and (max-width: 1200px) {
+  /* ==================SECTION HEADER====================== */
+  /* ==================SECTION HOME====================== */
+  /* ==================SECTION ABOUT====================== */
+  /* ==================SECTION SERVICES====================== */
+  /* ==================SECTION PORTFOLIO====================== */
+  /* BG-OVERLAY linear-gradient(rgba(0, 0, 0, 0.1), var(--color-btn)); */
+  /* ==================SECTION BLOG====================== */
+  /* ==================SECTION CONTACT====================== */
+  /* ==================SECTION FOOTER====================== */
+  /* ==================RESPONSIVO====================== */
 }
