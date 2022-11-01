@@ -1,4 +1,4 @@
-// =======================SHIRINK NAVBAR=======================
+// =================SHIRINK NAVBAR====================
 let navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
@@ -8,24 +8,5 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("sticky");
   }
 });
-// =======================SCROLL FUNCTION=======================
-// =======================SIDEBAR=======================
-let menu = document.getElementById("menu");
-let menuX = document.getElementById("menu-x");
-let navlist = document.getElementById("navlist");
-
-menu.addEventListener("click", () => {
-  if ((navlist.style.top = "-2000%")) {
-    navlist.style.top = "100%";
-    menu.style.display = "none";
-    menuX.style.display = "block";
-  }
-});
-
-menuX.addEventListener("click", () => {
-  if ((navlist.style.top = "100%")) {
-    navlist.style.top = "-2000%";
-    menu.style.display = "block";
-    menuX.style.display = "none";
-  }
-});
+// ================SCROLL FUNCTION====================
+// =======================SIDEBAR====================

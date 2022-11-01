@@ -14,7 +14,7 @@ h1= I'm Tahmid
 span = Web Developer
 h2= USA BASEAD FREELANCER
 btn= Read More
-h5= 5K+, 18K+, 30K+
+h5= 5K+, 18K+,
 p= Global Happy Clients, Project Complet, Awards Winner
 
 <!-- ====================SECTION ABOUT================== -->
