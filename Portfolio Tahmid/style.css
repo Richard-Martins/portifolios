@@ -11,8 +11,8 @@
 :root {
   --bg-overlay: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
   --bg-color: #ffffff;
-  --bg-color-header: #000;
   --second-bg-color: #f9f9f9;
+  --bg-color-header: #000;
   --text-color: #fff;
   --second-color: #161616;
   --main-color: #ef0454;
@@ -71,7 +71,7 @@ html {
   font-weight: 500;
   text-decoration: none;
   color: var(--text-color);
-  padding: 0 5px;
+  padding: 0 10px;
   position: relative;
 }
 
@@ -114,6 +114,10 @@ html {
 }
 
 /* ====================SECTION HOME==================  */
+section {
+  padding: 70px 13%;
+}
+
 #home {
   min-height: 100vh;
   width: 100%;
@@ -123,7 +127,6 @@ html {
 
 .container-home {
   color: var(--text-color);
-  padding: 15%;
 }
 
 .content-home {
@@ -181,8 +184,86 @@ html {
   background-color: var(--bg-color);
 }
 
+.container-about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.content-img img {
+  max-width: 490px;
+  width: 100%;
+  height: auto;
+}
+
+.content-about h3 {
+  font-size: var(--h2-font);
+  color: var(--second-color);
+  margin-bottom: 20px;
+}
+
+.content-about h4 {
+  font-size: 1.4rem;
+  color: var(--second-color);
+  margin-bottom: 20px;
+}
+
+.content-about p {
+  font-size: var(--p-font);
+  color: var(--other-color);
+  line-height: 30px;
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
 /* ====================SECTION SERVICES============= */
-/* ====================SECTION PORTFOLIO=============== */
+#services {
+  min-height: 100vh;
+  background-color: var(--second-bg-color);
+}
+
+.header-section {
+  text-align: center;
+}
+
+.header-section h4 {
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+
+.header-section h3 {
+  font-size: var(--h2-font);
+  color: var(--second-color);
+  margin-bottom: 15px;
+}
+
+.header-section p {
+  font-size: var(--p-font);
+  color: var(--other-color);
+  margin-bottom: 60px;
+}
+
+.card-service {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 30px;
+  align-items: center;
+}
+
+.card {
+  /* background-color: rebeccapurple; */
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  box-shadow: 2.8px 2.8px 2.3px rgba(0, 0, 0, 0.07),
+    6.7px 6.7px 5.6px rgba(0, 0, 0, 0.05),
+    12.5px 12.5px 10.8px rgba(0, 0, 0, 0.042),
+    22.3px 22.3px 19.8px rgba(0, 0, 0, 0.035),
+    41.8px 41.8px 37.9px rgba(0, 0, 0, 0.028),
+    100px 100px 81px rgba(0, 0, 0, 0.02);
+}
+
+/* ====================SECTION PORTFOLIO============= */
 /* ==================SECTION BLOG====================== */
 /* ===============SECTION CONTACT==================== */
 /* ==================FOOTER====================== */
