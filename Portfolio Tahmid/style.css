@@ -1,4 +1,4 @@
-/* ==========CONFIGURAÇÕES GLOBAIS================== */
+/* ====CONFIGURAÇÕES GLOBAIS========== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 * {
@@ -27,7 +27,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ====================HEADER==================  */
+/* ================HEADER============  */
 
 #navbar {
   display: flex;
@@ -113,7 +113,7 @@ html {
   background-color: transparent;
 }
 
-/* ====================SECTION HOME==================  */
+/* ===========SECTION HOME=============  */
 section {
   padding: 70px 13%;
 }
@@ -178,7 +178,7 @@ section {
   font-size: 2rem;
   font-weight: 600;
 }
-/* ====================SECTION ABOUT================== */
+/* ===========SECTION ABOUT============= */
 #about {
   min-height: 100vh;
   background-color: var(--bg-color);
@@ -187,7 +187,8 @@ section {
 .container-about {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+  justify-content: center;
+  background-color: rebeccapurple;
 }
 
 .content-img img {
@@ -217,7 +218,7 @@ section {
   margin-bottom: 50px;
 }
 
-/* ====================SECTION SERVICES============= */
+/* =========SECTION SERVICES=========== */
 #services {
   min-height: 100vh;
   background-color: var(--second-bg-color);
@@ -263,8 +264,8 @@ section {
     100px 100px 81px rgba(0, 0, 0, 0.02);
 }
 
-/* ====================SECTION PORTFOLIO============= */
-/* ==================SECTION BLOG====================== */
-/* ===============SECTION CONTACT==================== */
-/* ==================FOOTER====================== */
-/* ==================RESPONSIVO====================== */
+/* ============SECTION PORTFOLIO========== */
+/* =========SECTION BLOG=============== */
+/* ========SECTION CONTACT=============== */
+/* ==================FOOTER=============== */
+/* ===============RESPONSIVO============== */

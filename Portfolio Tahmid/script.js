@@ -1,4 +1,4 @@
-// =================SHIRINK NAVBAR====================
+// =========SHIRINK NAVBAR===============
 let navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
@@ -8,5 +8,5 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("sticky");
   }
 });
-// ================SCROLL FUNCTION====================
-// =======================SIDEBAR====================
+// ========SCROLL FUNCTION===============
+// =================SIDEBAR=================
