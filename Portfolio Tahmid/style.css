@@ -186,15 +186,17 @@ section {
 
 .container-about {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2fr 2fr;
   justify-content: center;
-  background-color: rebeccapurple;
+  align-items: center;
+  margin-top: 100px;
 }
 
 .content-img img {
   max-width: 490px;
   width: 100%;
   height: auto;
+  margin-left: 50px;
 }
 
 .content-about h3 {
@@ -226,6 +228,7 @@ section {
 
 .header-section {
   text-align: center;
+  margin: 50px 0 100px;
 }
 
 .header-section h4 {
@@ -248,23 +251,104 @@ section {
 .card-service {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px 30px;
+  gap: 50px;
   align-items: center;
 }
 
-.card {
-  /* background-color: rebeccapurple; */
-  background-color: var(--bg-color);
+.card-service .card {
   border-radius: 10px;
-  box-shadow: 2.8px 2.8px 2.3px rgba(0, 0, 0, 0.07),
-    6.7px 6.7px 5.6px rgba(0, 0, 0, 0.05),
-    12.5px 12.5px 10.8px rgba(0, 0, 0, 0.042),
-    22.3px 22.3px 19.8px rgba(0, 0, 0, 0.035),
-    41.8px 41.8px 37.9px rgba(0, 0, 0, 0.028),
-    100px 100px 81px rgba(0, 0, 0, 0.02);
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow: 25px 25px 50px #cecece, -25px -25px 50px #f2f2f2;
+  height: 250px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.card-service .card:hover {
+  transform: scale(1.02);
+  background: #e0e0e0;
+  box-shadow: 25px 25px 50px #a1a1a1, -25px -25px 50px #ffffff;
+}
+
+.card .text-service {
+  margin: 20px 50px;
+}
+
+.card i {
+  font-size: 3rem;
+  color: var(--main-color);
+}
+
+.card h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--second-color);
+  margin: 15px 0;
+}
+
+.card p {
+  font-size: var(--p-font);
+  line-height: 30px;
+  color: var(--other-color);
 }
 
 /* ============SECTION PORTFOLIO========== */
+#portfolio {
+  min-height: 100vh;
+  background-color: rebeccapurple;
+}
+
+.container-portfolio {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-portfolio {
+  position: relative;
+  cursor: pointer;
+}
+
+.card-portfolio img {
+  border-radius: 10px;
+  max-width: 410px;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 100%;
+  width: 100%;
+  background: var(--bg-overlay);
+  border-radius: 10px;
+}
+
+.text-portfolio h5 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.card-portfolio:hover h5 {
+  opacity: 1;
+  bottom: 50%;
+}
 /* =========SECTION BLOG=============== */
 /* ========SECTION CONTACT=============== */
 /* ==================FOOTER=============== */
