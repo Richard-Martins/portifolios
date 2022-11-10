@@ -12,7 +12,6 @@
       rel="stylesheet"
       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
     />
-
     <title>[error]Fully Responsive Personal Portfolio</title>
   </head>
   <body>
@@ -20,8 +19,6 @@
     <header class="header">
       <nav id="navbar">
         <h4 class="logo">P.<span class="destaque">folio</span></h4>
-        <i class="bx bx-menu"></i>
-        <i class="bx bx-x"></i>
         <ul id="navlist">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -30,6 +27,8 @@
           <li><a href="#blog">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <i class="bx bx-menu" id="menu"></i>
+        <i class="bx bx-x" id="menu-x"></i>
         <div class="btn-header">
           <a href="#" class="sign-up">Sign Up</a>
           <a href="#" class="sign-in">Sign In</a>
@@ -233,8 +232,31 @@
         </div>
       </section>
       <!-- ============SECTION CONTACT============= -->
-      <!-- ==================FOOTER============= -->
+      <section id="contact">
+        <h3>Subscribe for more html css website</h3>
+        <div class="newslatter">
+          <input type="text" name="text" id="text" placeholder="Your Email" class="text-input">
+          <!-- <a href="#">Subscribe</a> -->
+          <input type="submit" value="Subscribe" class="btn-input">
+        </div>
+      </section>
     </main>
+
+    <!-- ==================FOOTER============= -->
+    <footer>
+      <div class="copyright">
+        <div class="text-footer">
+          <p>
+            &copy; 2022 All rights reserved | Design & Developer by Tahmid Ahmed
+          </p>
+        </div>
+        <div class="social-media">
+          <i class="bx bxl-facebook"></i>
+          <i class="bx bxl-instagram"></i>
+          <i class="bx bxl-twitter"></i>
+        </div>
+      </div>
+    </footer>
     <!-- ============LINKS JAVASCRIPT============== -->
     <script src="script.js"></script>
   </body>
