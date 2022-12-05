@@ -27,10 +27,8 @@ menuX.addEventListener("click", () => {
 });
 
 // =================SIDEBAR SCROLL=================
-window.addEventListener("scroll", () => {
-  navlist.classList.remove("active");
-  menuX.style.display = "none";
-  menu.style.display = "block";
-});
-
-// ========SCROLL FUNCTION===============
+// window.addEventListener("scroll", () => {
+//   navlist.classList.remove("active");
+//   menuX.style.display = "none";
+//   menu.style.display = "block";
+// });
