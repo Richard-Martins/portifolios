@@ -23,6 +23,8 @@ body {
   box-shadow: 30px 30px 40px rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   backdrop-filter: blur(10px);
+  width: 400px;
+  height: 500px;
 }
 
 .container-box {
@@ -36,20 +38,8 @@ body {
   margin-top: 30px;
 }
 
-.input-box {
-  position: relative;
-}
-
-.input-box label {
-  position: absolute;
-  left: 10px;
-  top: 30px;
-  font-size: 18px;
-  pointer-events: none;
-  transition: all 0.3s ease-out;
-}
-
 .input-box input {
+  font-size: 18px;
   width: 100%;
   background-color: transparent;
   border: none;
@@ -59,10 +49,9 @@ body {
   margin: 20px 0;
 }
 
-.input-box input:focus ~ label,
-.input-box input:invalid ~ label {
-  top: 0;
-  font-size: 16px;
+.input-box input::placeholder {
+  font-size: 18px;
+  color: #000;
 }
 
 .input-box input[type="submit"] {
@@ -70,6 +59,7 @@ body {
   font-weight: 500;
   background-color: pink;
   border: none;
+  margin-top: 50px;
   cursor: pointer;
 }
 
