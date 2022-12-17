@@ -36,7 +36,7 @@ body {
 .container-box h1 {
   font-size: 50px;
   text-align: center;
-  color: #000;
+  color: #fff;
   margin-top: 30px;
 }
 
@@ -46,28 +46,31 @@ body {
   background-color: transparent;
   border: none;
   border-bottom: 2px solid rgba(255, 255, 255);
+  color: #fff;
   outline: none;
-  padding: 10px;
   margin: 20px 0;
 }
 
 .input-box input::placeholder {
   font-size: 18px;
-  color: #000;
+  color: #fff;
 }
 
 .input-box input[type="submit"] {
   font-size: 18px;
   font-weight: 500;
-  background-color: pink;
-  border: none;
+  background-color: #ffc0cb;
+  border: 2px solid #fff;
+  color: #fff;
   margin-top: 50px;
+  padding: 10px;
   cursor: pointer;
 }
 
 .container-box p,
 a {
   font-size: 14px;
+  color: #fff;
 }
 
 .container-box a {

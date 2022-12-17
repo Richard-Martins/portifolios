@@ -1,4 +1,4 @@
-/*--------------------------------Configuração Global--------------------------*/
+/* =================CONFIGURAÇÕES GLOBAIS================= */
 
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
 
@@ -20,94 +20,87 @@
 body,
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
-/*----------------------------------Header--------------------------*/
+section {
+  padding: 100px 15%;
+}
 
-#home {
-  min-height: 100vh;
-  min-width: 100vw;
-  background: url(imagem/background.jpg) center no-repeat;
-  background-size: cover;
+p {
+  color: var(--color-paragrafo);
+}
+
+/* =================HEADER================= */
+#navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 3% 8%;
 }
 
-.menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.menu .logo {
-  font-size: 40px;
+#navbar .logo {
+  font-size: 3em;
   color: var(--color-destaque);
-  cursor: pointer;
 }
 
-span {
+.destaque {
   color: var(--color-btn);
 }
 
-.menu li {
-  list-style: none;
+#navlinks li {
   display: inline-block;
-  margin: 30px;
+  list-style: none;
+  margin: 0 20px;
 }
 
-.menu li a {
-  font-size: 18px;
-  font-weight: 700;
+#navbar li a {
+  font-size: 1.5em;
   text-decoration: none;
   color: var(--color-destaque);
-  padding: 0 5px;
   position: relative;
 }
 
-.menu a::after {
+#navbar li a::after,
+#navbar li a::before {
   content: "";
   position: absolute;
-  bottom: -8px;
   left: 0;
+  bottom: -5px;
   width: 100%;
-  height: 3px;
-  transform: scale(0, 1);
-  background: var(--color-btn);
-  transition: transform 0.5s ease;
+  height: 2px;
+  transform: scale(0);
+  background-color: var(--color-btn);
+  transition: transform 0.4s ease-in-out;
 }
 
-.menu a::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  transform: scale(0, 1);
-  background: var(--color-btn);
-  transition: transform 0.5s ease;
+#navbar li a::before {
+  top: -8px;
 }
 
-.menu a:hover::before,
-.menu a:hover::after {
-  transform: scale(1, 1);
+#navbar li a:hover:after,
+#navbar li a:hover:before {
+  transform: scale(1);
 }
 
 .btn {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 1.5em;
   text-decoration: none;
   color: var(--color-destaque);
   background-color: var(--color-btn);
   border-radius: 30px;
-  outline: none;
-  border: 2px solid var(--color-btn);
   padding: 10px 30px;
-  cursor: pointer;
-  transition: all 0.5s;
 }
 
-/*----------------------------------Section Home--------------------------*/
+/* =================HOME================= */
+#home {
+  min-height: 100vh;
+  background: url(imagem/background.jpg) center;
+  background-size: cover;
+}
 
 .content-home {
   position: absolute;
@@ -117,432 +110,208 @@ span {
 }
 
 .content-home h3 {
-  font-size: 20px;
-  letter-spacing: 2px;
+  font-size: 2em;
+  font-weight: 500;
   color: var(--color-paragrafo);
 }
 
-.content-home .titulo {
-  font-size: 75px;
+.content-home h1 {
+  font-size: 5em;
   margin: 20px 0;
 }
 
 .content-home h2 {
-  font-size: 25px;
-  letter-spacing: 2px;
-  color: var(--color-destaque);
+  font-size: 2.5em;
+  font-weight: 500;
   margin-bottom: 50px;
 }
 
-.ipt-email {
-  font-size: 18px;
-  width: 500px;
-  border: 3px solid var(--color-btn);
-  outline: none;
+.form-box {
+  background-color: var(--color-destaque);
   border-radius: 30px;
-  padding: 20px;
-  position: relative;
+  padding: 10px 0;
 }
 
-#btn-home {
-  position: absolute;
-  right: 40px;
-  bottom: 10px;
+.form-box input[type="email"] {
+  font-size: 1.2em;
+  max-width: 67%;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  margin: 0 10px;
+  padding: 10px 0;
 }
 
-#btn-mobile {
-  display: none;
-}
-
-.scroll {
-  position: absolute;
-  bottom: 8%;
-  left: 50%;
-  transform: translateX(-50%);
+.form-box input[type="submit"] {
+  outline: none;
+  border: none;
   cursor: pointer;
 }
-
-.btn-scroll {
-  font-size: 20px;
-  font-weight: 900;
-  text-decoration: none;
-  color: var(--color-destaque);
-}
-
-.scroll i {
-  font-size: 20px;
-  color: var(--color-destaque);
-  position: absolute;
-  top: 40px;
-  left: 40%;
-  animation: shake 1s infinite alternate;
-}
-
-@keyframes shake {
-  from {
-    transform: translateY(-10px);
-  }
-
-  to {
-    transform: translateY(10px);
-  }
-}
-
-/*----------------------------------Section About--------------------------*/
-
+/* =================ABOUT================= */
 #about {
-  min-width: 100vw;
-  min-height: 90vh;
+  min-height: 100vh;
   background-color: var(--bg-section);
 }
 
-.conteiner-about {
-  display: flex;
+.content-about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  column-gap: 30px;
+  justify-items: center;
   align-items: center;
-  justify-content: center;
-  gap: 100px;
   color: var(--color-destaque);
 }
 
-.image {
-  margin-top: 100px;
+.img-box img {
+  max-width: 500px;
+  min-width: 300px;
+  width: 100%;
 }
 
-.my-photo {
-  max-width: 100%;
+.text-box h2 {
+  font-size: 5em;
 }
 
-.subtitulo {
-  font-size: 80px;
-  margin-bottom: 20px;
+.text-box h3 {
+  font-size: 1.5em;
+  margin: 20px 0;
 }
 
-.content-about h3 {
-  font-size: 25px;
-  margin-bottom: 20px;
-}
-
-.content-about p {
+.text-box p {
   font-size: 18px;
   text-align: justify;
   line-height: 30px;
-  color: var(--color-paragrafo);
-  margin-bottom: 40px;
-}
-
-#btn-hover:hover {
-  border: 2px solid var(--color-btn);
-  background-color: var(--bg-section);
-}
-
-/*----------------------------------Section Services--------------------------*/
-
-#services {
-  min-width: 100vw;
-  min-height: 80vh;
-  background-color: var(--bg-section-odd);
-}
-
-.conteiner-services {
-  padding: 100px 0 50px;
-}
-
-.conteiner-services .subtitulo {
-  font-size: 80px;
-  text-align: center;
-  color: var(--color-destaque);
   margin-bottom: 50px;
 }
 
-.sevices-cards {
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  gap: 30px;
-}
-
-.card {
-  width: 400px;
-  height: 400px;
-  text-align: center;
-  background-color: var(--bg-section);
-  border-radius: 20px;
-}
-
-.card h3 {
-  font-size: 25px;
-  color: var(--color-destaque);
-  margin-top: 100px;
-  margin-bottom: 20px;
-}
-
-.card p {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/*----------------------------------Section Skills--------------------------*/
-
-#skills {
-  min-width: 100vw;
-  min-height: 40vh;
-  background-color: var(--bg-section);
-  text-align: center;
-}
-
-#skills .subtitulo {
-  font-size: 32px;
-  color: var(--color-destaque);
-  padding-top: 100px;
-  margin-bottom: 50px;
-}
-
-p {
-  color: var(--color-paragrafo);
-  line-height: 30px;
-}
-
-/*----------------------------------Section Contact--------------------------*/
-
-#contact {
-  min-width: 100vw;
-  min-height: 45vh;
-  background-color: var(--bg-section-odd);
-  text-align: center;
-}
-
-#contact .subtitulo {
-  font-size: 32px;
-  color: var(--color-destaque);
-  padding-top: 100px;
-  margin-bottom: 50px;
-}
-
-#contact p {
-  text-align: center;
-  padding: 0 10px;
-  margin-bottom: 20px;
-}
-
-#contact i {
-  font-size: 30px;
-  width: 50px;
-  height: 50px;
+.btn-section {
+  font-size: 1.5em;
+  text-decoration: none;
   color: var(--color-destaque);
   background-color: var(--color-btn);
   border: 2px solid var(--color-btn);
+  border-radius: 30px;
+  padding: 10px 30px;
+  transition: all 0.5s;
+}
+
+.btn-section:hover {
+  background-color: transparent;
+}
+
+/* =================SERVICES================= */
+#services {
+  min-height: 100vh;
+  background-color: var(--bg-section-odd);
+}
+
+.header-section h2 {
+  font-size: 5em;
+  text-align: center;
+  color: var(--color-destaque);
+}
+
+.container-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  column-gap: 30px;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.card-services {
+  width: 400px;
+  height: 300px;
+  background-color: var(--bg-section);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.card-services h4 {
+  font-size: 1.5em;
+  color: var(--color-destaque);
+  margin: 50px 0 20px;
+}
+
+.card-services p {
+  line-height: 30px;
+  margin: 0 10px 50px;
+}
+
+.card-services .btn-section {
+  margin-bottom: 50px;
+}
+
+/* =================SKILLS================= */
+#skills {
+  background-color: var(--bg-section);
+}
+
+.container-skills {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.content-skills h2 {
+  font-size: 2.5em;
+  color: var(--color-destaque);
+  margin-bottom: 30px;
+}
+
+/* =================CONTACT================= */
+#contact {
+  background-color: var(--bg-section-odd);
+}
+
+.container-contact {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.container-contact h3 {
+  font-size: 1.5em;
+  color: var(--color-destaque);
+}
+
+.container-contact p {
+  line-height: 30px;
+  margin: 20px;
+}
+
+.social-media {
+  margin-bottom: 30px;
+}
+
+.social-media i {
+  font-size: 30px;
+  color: var(--color-destaque);
   border-radius: 50%;
-  padding-top: 10px;
-  margin: 10px;
+  margin: 0 15px;
   cursor: pointer;
   transition: all 0.5s;
 }
 
-#contact i:hover {
-  background-color: var(--bg-section-odd);
+.social-media i:hover {
+  transform: translateY(-10px);
   color: var(--color-btn);
 }
 
-.footer {
-  min-height: 10vh;
-  background-color: var(--bg-section-odd);
-  margin-top: 40px;
+.container-contact span {
+  color: var(--color-paragrafo);
 }
 
-/*----------------------------------Reponsivo--------------------------*/
-
+/* =================RESPONSIVO================= */
 @media screen and (max-width: 600px) {
-  /*----------------------------------Section Home--------------------------*/
-
-  #home {
-    min-height: 100vh;
-    min-width: 100vw;
-    background: url(imagem/background.jpg) center no-repeat;
-    background-size: cover;
-    padding: 8% 8%;
+  #navbar .logo {
+    font-size: 2.5em;
   }
 
-  .menu .logo {
-    font-size: 30px;
-  }
-
-  #menu-links {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-btn);
-    z-index: 1;
-    overflow: hidden;
-    transition: all 0.5s;
-  }
-
-  #menu-links.active {
-    left: 0;
-  }
-
-  .menu li {
-    margin: 20px;
-  }
-
-  .menu a::before,
-  .menu a::after {
-    background-color: var(--color-destaque);
-  }
-
-  .menu .btn {
+  #navlinks {
     display: none;
   }
 
-  #sidebar {
-    cursor: pointer;
-    z-index: 2;
-  }
-
-  #sidebar .line {
-    width: 30px;
-    height: 3px;
-    background-color: var(--color-btn);
-    margin: 5px 0;
-    transition: all 0.5s;
-  }
-
-  #sidebar.active #line1 {
-    transform: translateY(5px) rotate(310deg);
-    background-color: var(--color-destaque);
-  }
-
-  #sidebar.active #line2 {
-    opacity: 0;
-  }
-
-  #sidebar.active #line3 {
-    transform: translateY(-11px) rotate(-310deg);
-    background-color: var(--color-destaque);
-  }
-
-  .content-home {
-    position: absolute;
-    left: 8%;
-    top: 50%;
-    color: var(--color-destaque);
-  }
-
-  .content-home h3 {
-    font-size: 15px;
-  }
-
-  .content-home .titulo {
-    font-size: 30px;
-    margin: 20px 0;
-  }
-
-  .content-home h2 {
-    font-size: 20px;
-  }
-
-  .ipt-email {
-    font-size: 17px;
-    width: 275px;
-    border: 3px solid var(--color-btn);
-    outline: none;
-    border-radius: 30px;
-    padding: 10px;
-    position: relative;
-  }
-
-  #btn-home {
+  #btn-header {
     display: none;
-  }
-
-  #btn-mobile {
-    display: block;
-    position: absolute;
-    right: 18px;
-    bottom: 10px;
-    font-size: 20px;
-    color: var(--color-btn);
-    cursor: pointer;
-  }
-
-  /*----------------------------------Section About--------------------------*/
-
-  .conteiner-about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .my-photo {
-    max-width: 300px;
-    padding: 0 20px;
-  }
-
-  .subtitulo {
-    font-size: 40px;
-    text-align: center;
-    margin-top: -50px;
-  }
-
-  .content-about h3 {
-    text-align: center;
-  }
-
-  .content-about p {
-    font-size: 14px;
-    text-align: center;
-    line-height: 25px;
-    padding: 0 20px;
-  }
-
-  .content-about .btn {
-    display: block;
-    margin: 0 auto 100px;
-  }
-
-  /*-------------------------------Section Services--------------------------*/
-
-  .sevices-cards {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 100px;
-  }
-
-  #services .subtitulo {
-    font-size: 40px;
-  }
-
-  .card {
-    width: 300px;
-    height: 300px;
-    margin: 30px;
-  }
-
-  .card h3 {
-    margin-top: 50px;
-  }
-
-  .card p {
-    font-size: 16px;
-    padding: 0 10px;
-  }
-
-  /*----------------------------------Section Skills--------------------------*/
-
-  #skills {
-    min-height: 50vh;
-  }
-  #skills .subtitulo {
-    font-size: 20px;
-  }
-
-  #skills .btn {
-    margin-top: -20px;
   }
 }

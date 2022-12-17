@@ -65,8 +65,11 @@ section {
   transform: scale(1);
 }
 
-.menu-icon-box {
+#menu-icon {
   display: none;
+  font-size: 30px;
+  color: var(--color-white);
+  cursor: pointer;
 }
 
 /* ============HOME============ */
@@ -140,7 +143,7 @@ section {
 
 /* ============ABOUT============ */
 #about {
-  min-height: 80vh;
+  min-height: 100vh;
   min-width: 100vw;
 }
 
@@ -393,59 +396,4 @@ footer {
 .social-media i:hover {
   transform: translateY(-10px);
   color: var(--color-orange);
-}
-
-/* ============RESPONSIVO============ */
-@media screen and (max-width: 1024px) {
-  section {
-    padding: 0 2%;
-  }
-
-  .content-home h1 {
-    font-size: 4em;
-  }
-
-  .header-section {
-    margin-bottom: 100px;
-  }
-
-  .content-about {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-
-  .content-course,
-  .content-blog {
-    column-gap: 30px;
-  }
-
-  .content-contact h2 {
-    font-size: 1.8em;
-  }
-}
-
-@media screen and (max-width: 868px) {
-  #navbar {
-    padding: 2% 1%;
-  }
-
-  #navlinks {
-    display: none;
-  }
-
-  .content-home h1 {
-    font-size: 3em;
-  }
-
-  .content-about {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 50px 0;
-    margin: 0 30px;
-  }
-
-  .content-course,
-  .content-blog {
-    grid-template-columns: repeat(1, 500px);
-    gap: 50px 0;
-  }
 }
