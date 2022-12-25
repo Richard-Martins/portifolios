@@ -5,39 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9575d650a4.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Glassmorphism Form</title>
   </head>
   <body>
-    <div class="container">
-      <div class="container-box">
-        <h1>Login</h1>
-        <form action="" autocomplete="off" method="post">
-          <div class="input-box">
-            <div id="msg-email" class="msg"></div>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              required
-            />
-          </div>
-          <div class="input-box" id="ipt-senha">
-            <div id="msg-senha" class="msg"></div>
-            <input
-              type="password"
-              name="senha"
-              id="senha"
-              placeholder="senha"
-            />
-          </div>
-          <div class="input-box">
-            <input type="submit" value="Entrar" />
-          </div>
-        </form>
-        <p>Não tem uma conta? <a href="#">Cadastrar-se</a></p>
+    <form autocomplete="off" id="form">
+      <h1>Login</h1>
+      <div class="input-box">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          required
+        />
+        <div id="email-result" class="result"></div>
       </div>
-    </div>
+      <div class="input-box">
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          required
+        />
+        <i class="fa-solid fa-eye" id="open-eye"></i>
+        <i class="fa-solid fa-eye-slash" id="close-eye"></i>
+        <i class="fa-solid fa-circle-check" id="valid"></i>
+        <i class="fa-solid fa-circle-exclamation" id="invalid"></i>
+        <div id="password-result" class="result"></div>
+      </div>
+      <div class="input-box">
+        <input type="submit" value="Sign In" class="btn" />
+      </div>
+    </form>
 
     <script src="script.js"></script>
   </body>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/9575d650a4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="../img/product1.png" type="image/x-icon" />
+    <title>Sound Box</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav id="navbar">
+          <span class="logo"
+            ><i class="fa-solid fa-headphones"></i>Soundbox</span
+          >
+          <ul id="navlinks">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Teach Specs</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <div class="nav-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+          </div>
+        </nav>
+      </header>
+      <section id="home">
+        <div class="nav-products">
+          <div class="container-products">
+            <img
+              src="../img/main1.png"
+              alt="headphones"
+              id="products1"
+              class="products"
+              onclick="imgSlider('../img/product1.png')"
+            />
+          </div>
+          <div class="container-products">
+            <img
+              src="../img/main2.png"
+              alt="headphones"
+              id="products2"
+              class="products"
+              onclick="imgSlider('../img/product2.png')"
+            />
+          </div>
+          <div class="container-products">
+            <img
+              src="../img/main3.png"
+              alt="headphones"
+              id="products3"
+              class="products"
+              onclick="imgSlider('../img/product3.png')"
+            />
+          </div>
+        </div>
+        <div class="img-box">
+          <img src="../img/product1.png" alt="headphones" id="img" />
+        </div>
+        <div class="text-box">
+          <h1>
+            Wireless <br />
+            Headphones
+          </h1>
+          <p>The smarter way to listen</p>
+          <span class="price">$199.99</span>
+          <button class="btn">Shop Now</button>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

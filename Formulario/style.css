@@ -1,106 +1,115 @@
-
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
 
-section{
-    min-height: 100vh;
-    min-width: 100vw;
-    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+section {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-image: linear-gradient(
+    to right,
+    rgb(20, 147, 220),
+    rgb(17, 54, 71)
+  );
 }
 
-.box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 400px;
-    padding: 15px;
-    border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.6);
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
-fieldset{
-    border: 3px solid dodgerblue;
+fieldset {
+  border: 3px solid dodgerblue;
 }
 
-legend{
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    border: 1px solid dodgerblue;
-    border-radius: 5px;
-    background-color: dodgerblue;
-    padding: 10px;
+legend {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid dodgerblue;
+  border-radius: 5px;
+  background-color: dodgerblue;
+  padding: 10px;
 }
 
-.inputbox{
-    position: relative;
-    margin: 40px 10px;
+.inputbox {
+  position: relative;
+  margin: 40px 10px;
 }
 
-.inputuser{
-    background: none;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #fff;
-    letter-spacing: 1px;
-    width: 100%;
+.inputuser {
+  background: none;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #fff;
+  letter-spacing: 1px;
+  width: 100%;
 }
 
-.labelinput{
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    transition: .5s;
+.labelinput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: 0.5s;
 }
 
 .inputuser:focus ~ .labelinput,
-.inputuser:valid ~ .labelinput{
-    transform: translateY(-20px);
-    font-size: 13px;
-    color: dodgerblue;
+.inputuser:valid ~ .labelinput {
+  transform: translateY(-20px);
+  font-size: 13px;
+  color: dodgerblue;
 }
 
-.inputbox p{
-    font-weight: bold;
-    margin-bottom: 10px;
+.inputbox p {
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.label-data{
-    font-weight: bold;
-    padding: 10px;
+.label-data {
+  font-weight: bold;
+  padding: 10px;
 }
 
-.data-nascimento{
-    font-size: 17px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    color: #000;
-    padding: 10px;
+.data-nascimento {
+  font-size: 17px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #000;
+  padding: 10px;
 }
 
-#submit{
-    display: block;
-    font-size: 18px;
-    width: 80%;
-    background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    color: #000;
-    padding: 10px;
-    margin: 0 auto 10px;
+#submit {
+  display: block;
+  font-size: 18px;
+  width: 80%;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 92, 197),
+    rgb(90, 20, 220)
+  );
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #000;
+  padding: 10px;
+  margin: 0 auto 10px;
 }
 
-#submit:hover{
-    background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
+#submit:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 80, 172),
+    rgb(80, 19, 195)
+  );
 }
-
-

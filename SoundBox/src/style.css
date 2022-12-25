@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #101113;
+  --text-color: #fff;
+  --main-color: #34e7f8;
+  --other-color: #fcfcfc;
+  --h1-font: 6rem;
+  --p-font: 1rem;
+}
+
+body {
+  background: var(--bg-color);
+  padding: 0 8%;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  color: var(--text-color);
+}
+
+#navbar i {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logo i {
+  color: var(--main-color);
+  margin-right: 10px;
+}
+
+#navlinks li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+#navlinks li a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.5s;
+}
+
+#navlinks li a:hover {
+  color: var(--main-color);
+}
+
+.nav-icon i {
+  margin: 0 15px;
+}
+
+#home {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  justify-items: center;
+  margin-top: 5%;
+}
+
+.nav-products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-products {
+  margin: 20px 0;
+  cursor: pointer;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.container-products:hover {
+  transform: translateY(-10px);
+}
+
+.container-products img {
+  width: 80px;
+  height: 80px;
+}
+
+.products {
+  border-radius: 50%;
+}
+
+.container-products #products1 {
+  background-color: var(--main-color);
+}
+
+.container-products #products2 {
+  background-color: #ff838c;
+}
+
+.container-products #products3 {
+  background-color: #fccb6c;
+}
+
+.img-box {
+  max-width: 700px;
+  max-height: 700px;
+  width: 100%;
+}
+
+.img-box #img {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+.text-box h1 {
+  font-size: var(--h1-font);
+  line-height: 100px;
+  color: var(--text-color);
+  margin: 100px 0 10px 0;
+}
+
+.text-box p {
+  font-size: var(--p-font);
+  color: var(--other-color);
+  opacity: 0.5;
+  margin-bottom: 50px;
+}
+
+.text-box .price {
+  display: block;
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.text-box .btn {
+  display: block;
+  font-size: 20px;
+  background-color: transparent;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+  padding: 10px 60px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.text-box .btn:hover {
+  color: var(--bg-color);
+  background-color: var(--text-color);
+}

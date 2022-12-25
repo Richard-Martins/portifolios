@@ -104,7 +104,7 @@ h1 {
   letter-spacing: 3px;
 }
 
-#buger-fries {
+#img {
   max-width: 700px;
   width: 100%;
 }
@@ -155,7 +155,7 @@ h1 {
 }
 
 #arrow-left,
-#arrow-right {
+#arrow-rigth {
   font-size: 40px;
   color: var(--letters-color);
   border: 2px solid var(--letters-color);
